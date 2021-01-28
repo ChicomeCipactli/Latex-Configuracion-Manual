@@ -1,42 +1,53 @@
-EJEMPLOS=~/Latex-Configuración-Manual/Ejemplos
+#! /bin/bash -e
+
+EJEMPLOS=~/Latex-Configuracion-Manual/Ejemplos
+curr_dir=`pwd`
+
+PROMPT=">> "
 
 nombre=$1
 
-function readWord( ){
-    read word
-    if [ -z word ] ; then
-        word="word"
-    fi
-    return word
-}
+# function emptyWord( ){
+#     if [ -z $1 ] ; then
+#         word="word"
+#     fi
+#     $1=$word
+# }
+
 
 echo -e "\e[1;36m¿Cuál ejemplo quieres que mueva?\e[0m"
 echo -e "\e[1;36mdefault:\e[0m Tarea1"
 ls $EJEMPLOS
 
-echo -e "\e[1;36m>>\e[0m "
-read ejemplo
+read -p "${PROMPT}" ejemplo 
 
+if [ -z $ejemplo ] ; then 
+    ejemplo=Tarea1
+fi
 
+# emptyWord ejemplo
 
 if [ -d $EJEMPLOS/$ejemplo ] ;
 then
     echo -e "\e[1;36mCopiando $ejemplo\e[0m"
-    if [ $# -eq 0 ]; then
+    if [ $# -eq 0 ] ; then
         echo -e "\e[1;36m¿Cuál es el nuevo nombre?\e[0m"
-        echo -e "\e[1;36m>>\e[0m "
-        read nombre
+        read -p "${PROMPT}" nombre
+        if [ -z $nombre ] ; then
+            nombre=tarea
+        fi
     fi
-    cp -r $EJEMPLOS/$ejemplo ./$nombre
+    cp -r $EJEMPLOS/$ejemplo $curr_dir/$nombre
     mv $nombre/main.tex $nombre/$nombre.tex
 else 
     echo -e "\e[1;36mcopiando Tarea1\e[0m"
-    if [ $# -eq 0 ]; then
+    if [ $# -eq 0 ] ; then
         echo -e "\e[1;36m¿Cuál es el nuevo nombre?\e[0m"
-        echo -e "\e[1;36m>>\e[0m "
-        read nombre
+        read -p "${POMPT}" nombre
+        if [ -z $nombre ] ; then
+            nombre=tarea
+        fi
     fi
-    # ls $EJEMPLOS/*
-    # cp -r $EJEMPLOS/Tarea1 ./$nombre
-    # mv $nombre/main.tex $nombre/$nombre.tex
+    cp -r $EJEMPLOS/Tarea1 $curr_dir/$nombre
+    mv $nombre/main.tex $nombre/$nombre.tex
 fi
