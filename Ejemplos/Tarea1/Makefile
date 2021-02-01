@@ -1,5 +1,7 @@
-compile: *.tex ejercicios/*.tex
-	~/Latex-Configuración-Manual/Scripts/Compile/Tarea1.sh
+# NOMBRE=
 
-clean:
-	@rm -rf build
+compile: *.tex ejercicios/*.tex
+	@~/Latex-Configuracion-Manual/Scripts/Compile/Tarea1.sh 
+
+clean: 
+	@~/Latex-Configuracion-Manual/Scripts/Clean.sh 
