@@ -1,0 +1,149 @@
+\setcounter{section}{1}
+\begin{enumerate}[(i)] \item
+        Sea \( \alpha = \left( i_0\quad i_1\quad \cdots\quad i_{r-1} \right) \) un \( r \)-ciclo.
+        Para cada \( j,k\geq 0 \), demuestra que \( \alpha^k \left( i_j \right) = i_{k+j} \) 
+        si los subíndices se leen módulo \( r \).
+        \begin{proof}
+            Podemos identificar al conjunto de
+            \( \set{0,\ldots,r-1} \) con \( \Z_{r} \) para así decir que 
+            \( i_{j}= i_{\overline{t}} \) siempre que \( j\in \overline{t} \), 
+            donde \( j\in\set{1,\ldots,r-1} \) y \( \overline{t}\in\Z_{r} \), es
+            decir, \( j \equiv t \mod r  \). 
+            % Por lo tanto, es cierto el resultado
+            % para \( k = 0 \).
+
+            Procederemos por inducción sobre \( k\geq 0 \). Para \( k = 0 \) 
+            tenemos que \( \alpha^k = \mathrm{id} \). Por lo tanto, para toda $j\geq 0$
+            se tiene \( \alpha^k \left( i_{\overline{j}} \right) = i_{\overline{j}}=
+            i_{\overline{j+k}}\). Así que nuestra base inductiva con \( k=0 \) es cierta.
+            
+            Supongamos que para alguna \( k\geq 0 \) se tiene que para toda \( \overline{j}\in
+            \Z_{r}\), \( \alpha^k \left( i_{\overline{j}} \right) = i_{\overline{j+k}} \).
+            Al aplicar nuevamente \( \alpha \) obtenemos que para toda \( \overline{t}\in
+            \Z_{r}\) 
+            \begin{align*}
+                \alpha^{k+1}
+                \left( i_{\overline{t}} \right) 
+                &=
+                \alpha 
+                \left( 
+                    \alpha^k
+                    \left(
+                    i_{\overline{t}}
+                    \right)
+                \right) \\
+                &=
+                \alpha \left( i_{\overline{t+k}} \right) ,\quad\text{por la hipótesis de inducción,}\\
+            \end{align*}
+            Sin embargo, como \( \alpha \) es un ciclo, 
+            tenemos \( \alpha \left( i_{\overline{t+k}} \right) 
+            = i_{\overline{t+k}+\overline{1}}
+            = i_{\overline{t+k+1}}\).
+            Por lo tanto 
+            \( \alpha^{k+1} \left( i_{\overline{j}} \right) 
+            = i_{\overline{j+k+1}}\). Por el principio de inducción, se satisface lo anterior 
+            para cada \( k\geq 0 \).
+        \end{proof}
+    \item
+        Demuestra que si \( \alpha \) es un \( r \)-ciclo,
+        entonces \( \alpha^r=1 \), pero que \( \alpha^k \neq 1 \) para cada 
+        entero positivo \( k<r \).
+        \begin{proof}
+            Sea \( i_{\overline{j}}\) un elemento que se mueve por el ciclo \( \alpha \).
+            Por el inciso anterior
+            \[
+                \alpha^r \left( i_{\overline{j}} \right) 
+                =
+                i_{\overline{j+r}}
+                =
+                i_{\overline{j}+\overline{r}}
+                =
+                i_{\overline{j}+\overline{0}}
+                =
+                i_{\overline{j}}.
+            \]
+            Para cualquier \( i_{\overline{j}} \) que se queda fijo por \( \alpha \), 
+            para toda \( k\geq 0 \) también se queda fijo por \( \alpha^k \),
+            en particular para \( k = r \).
+            De esta manera \( \alpha^r \) es la función identidad porque fija a todos los elementos
+            en su dominio.
+            
+            Sin embargo, si \( 0<k<r \), por lo anterior \( \alpha^k \left( i_{\overline{0}} \right)
+            = i_{\overline{k}}\), pero \( \overline{k} \neq \overline{0} \), y
+            entonces \( \alpha^k \left( i_{\overline{0}} \right) \neq i_{\overline{0}} \). 
+            Así que \( \alpha^k\) no es la identidad.
+        \end{proof}
+    \item
+        Si \( \alpha=\beta_1\beta_2\cdots \beta_m \) es un producto de \( r_i \)-ciclos 
+        disuntos \( \beta_i \), entonces el 
+        entero positivo más pequeño \( l \) con \( \alpha^l = 1\) es el mínimo común múltiplo de 
+        \( \set{r_1,r_2,\ldots,r_m} \).
+
+        % Usaremos el siguiente lema.
+        % \begin{lemma}
+        %     Si \( \beta_1,\ldots,\beta_m \) son permutaciones disjuntas por pares,
+        %     entonces \( \beta_m \) y \( \beta_1\cdots\beta_{m-1} \) son disjuntas.
+        % \end{lemma}
+        % \begin{proof}
+        %     % Por inducción sobre \( m\geq 2 \). Por hipótesis, el caso de \( m = 2 \) es cierto.
+        %     % Supongamos que para alguna \( k \geq 2 \),
+        %     % si se tienen
+        %     % \( \beta_1,\ldots, \beta_k \) ciclos disjuntos por pares, entonces 
+        %     % \( \beta_k \) y \( \beta_{1}\cdots \beta_{k-1} \) son disjuntos.
+        %     % Si \( \beta_{k+1} \) es otro ciclo que es disjunto a cada \( \beta_i \) para toda
+        %     % \( i(1 \leq i \leq k) \) {}
+        %     Sea \( i \) tal que \( \beta_m ( i ) \neq i \). Entonces
+        %     se tiene \( i = \beta_1 ( i ) = \cdots = \beta_{m-1} ( i ) \).
+        %     Así que 
+        %     \begin{align*}
+        %         \left(
+        %         \prod_{j=1}^{m-1} \beta_ j \right)(i)
+        %         &=
+        %         \left( \prod_{j=2}^{m-1} \beta_j \right) \left( \beta_1 ( i ) \right) \\
+        %         &=
+        %         \left( \prod_{j=2}^{m-1} \beta_j \right) \left( i  \right) \\
+        %         &\quad\vdots \\
+        %         &=
+        %         \beta_{m-1} ( i ) \\
+        %         &= i.
+        %     \end{align*}
+        %     Por lo tanto \( \beta_{m-1}\cdots \beta_{1} \) fijan a \( i \). Entonces
+        %     \( \beta_{m} \) y \( \beta_{m-1}\cdots \beta_{1} \) son disjuntas.
+        % \end{proof}
+
+        % El siguiente lema también será de utilidad.
+        % \begin{lemma}
+        %     Sean \( \beta_1,\ldots,\beta_m \) permutaciones disjuntas por pares.
+        %     Entonces 
+        %     \[
+        %         \left( \prod_{i=1}^{m} \beta_i \right)^n
+        %         =
+        %         \prod_{i=1}^{m}
+        %         \beta_i^{n},\quad\text{para toda $n\in \Z$.}
+        %     \]
+        % \end{lemma}
+        % \begin{proof}
+        %     El caso \( n = 0 \) es trivial, por componer \( m \) veces la función identidad.
+        % \end{proof}
+        \begin{proof}
+            Por inducción se puede probar que \( \alpha^n = \beta_1^n \cdots \beta_m^n \) para
+            toda \( n\in \Z \), como una generalización del ejercicio en la tarea 1,
+            pues es el producto de permutaciones disjuntas.
+
+            De esta manera tenemos \( 1=\alpha^l = \beta_1^l \cdots \beta_m^l \). 
+            Si algún \( \beta_i \) mueve a \( x \), entonces \( \beta_j \) lo fija 
+            si \( i \neq j \). Por lo tanto \( \beta_{j}^l \) también lo deja fijo, 
+            ya que \( \beta^l( x ) = \beta^{l-1} \left( \beta(x) \right) = \beta^{l-1} 
+            \left( x \right) \), e inductivamente se tiene que \( \beta^{l-1} ( x ) = x \).
+
+            Informalmente... \( \beta_i^l (x) = 1 \). Entonces \( l \) es un múltiplo de 
+            \( r_i \) por incisos anteriores, 
+            pues esto se mantiene para toda \( x \) que sea movida por \( \beta_i \).
+            Por tanto \( l \) es un común múltiplo de \( r_1,\ldots,r_m \).
+            
+            Si el mínimo común múltiplo lo satisface entonces terminamos. Pero sí lo hace
+            porque se elevan cada una de las betas al mcm de las \( r_i \)'s. Lo cual
+            las hace identidades.
+        \end{proof}
+\end{enumerate}
+ 

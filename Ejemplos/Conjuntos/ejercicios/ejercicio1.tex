@@ -1,0 +1,43 @@
+Suponga que \( A \) es el set de enteros divisibles por \( 4 \). 
+Similarmetne suponga que \( B \) y \( C \) son los conjuntos de enteros divisibles
+por \( 9 \) y \( 10 \), respectivamente. ¿Qué es \( A \cap B \cap C \)?
+\begin{solution}
+    Sea \( D = \set{ n \in \Z: n \text{ es múltiplo de }180 } \). Este es el conjunto 
+    de la intersección, es decir
+    \[
+        D = A \cap B \cap C
+    \]
+    Sea \( n \in D \). Como \( n \) es divisible por 180, se puede escribir como
+    \begin{eqnarray*}
+        n 
+        &=&
+        180 k,\quad\text{para algún entero }k\\
+        &=&
+        ( 9 ) ( 2 )^2 ( 5 ) k
+    \end{eqnarray*}
+    Entonces \( 9,\) divide a \( n \), por lo que \( n\in B \), 
+    \( 2^2 = 4 \) divide a \( n \), por lo que \( n \in A \), y por último 
+    \( 2 \cdot 5 = 10 \) divide a \( n \), por lo cual \( n \in C \).
+    Así que \( n \in A\cap B \cap C \). 
+    Esto prueba que \( D \subseteq A \cap B \cap C \).
+
+    Por otro lado si \( n \in A \cap B \cap C \), entonces
+    \( n \in A \), con lo que \( n \) es divisible por 4, y eso implica que 
+    se puede escribir como \( n = 4 \cdot k' \) para algún \( k'\in \Z \).
+    También puede concluirse que \( n \in B \), con lo cual \( n \) es divisible
+    por \( 9 \), y entonces \( 9 \) debe dividir a 
+    \( k' \), ya que \( 9 \) no tiene divisores primos en común con \( 4 \). Por lo tanto 
+    \( n = 9 \cdot 4 \cdot k''\), con \( k'' \) entero. Por último, como también
+    \( n \) es divisible por 10. Sin embargo, como \( 2 \) divide a \( 4 \) no 
+    es necesario que \( 10 \) divida a \( k'' \). Sin embargo, \( 5 \) no tiene factores en común
+    con \( 9 \cdot 4 \) por lo que \( 5 \) divide a \( k'' \). Entonces, 
+    \[
+        n = 9 \cdot 4 \cdot 5 \cdot k'''',
+    \]
+    para algún entero \( k'''' \). Entonces \( 9 \cdot 5 \cdot 4 = 180\) 
+    divide a \( n \). Por tanto \( n\in D \). Concluimos que 
+    \( A \cap B \cap C \subseteq D\), y por tener doble contención 
+    \[
+        D = A \cap B \cap C.
+    \]
+\end{solution}

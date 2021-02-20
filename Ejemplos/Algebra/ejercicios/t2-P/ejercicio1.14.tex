@@ -1,0 +1,100 @@
+\begin{enumerate}[(i)]
+    \item
+        Sea \( \alpha = \beta \gamma \) en \( S_n \), donde \( \beta \) y \( \gamma \) 
+        son disjuntas. Si \( \beta \) mueve \( i \), 
+        entonces \( \alpha^k ( i ) = \beta^k ( i ) \) para toda \( k\geq 0 \).
+        El lema siguiente será de utilidad.
+        \begin{lemma}\label{muevela-tambien}
+            Sea \( \beta\in S_n \), y sea \( i \) tal que \( \beta \) mueve a \( i \).
+            Entonces \( \beta \) mueve a \( \beta^k ( i ) \) para toda \( k\geq 0 \).
+        \end{lemma}
+        \begin{proof}
+            Por inducción sobre \( k\geq 0 \). Para \( k=0 \) tenemos que 
+            \( \beta^k = \mathrm{id} \), por lo que \( \beta \) mueve a \( i = \mathrm{id}(i) =
+            \beta^k ( i ) \), por hipótesis.
+
+            Supongamos que para alguna \( k \geq 0 \), \( \beta \) mueve a \( \beta^k ( i ) \).
+            Si suponemos que 
+            \( \beta \left( \beta^{k+1} ( i ) \right)  = \beta^{k+1} ( i ) \)
+            aplicando \( \beta^{-1} \) por la izquierda
+            concluiríamos que 
+            \[
+                \beta^{k+1} ( i ) = \beta^{k} ( i ).
+            \]
+            Es decir, tendríamos que \( \beta \left( \beta^{k} ( i ) \right) = 
+            \beta^{k} ( i )\), lo cual contradice la hipótesis de inducción, en la que 
+            \( \beta \) mueve a \( \beta^k ( i ) \). Por lo tanto, debe suceder que 
+            \( \beta \) mueva a \( \beta^{k+1} ( i ) \). 
+
+            Lo anterior, por el principio de inducción implica que 
+            \( \beta \) mueve a \( \beta^{k} ( i ) \), para toda \( k \geq 0 \).
+        \end{proof}
+
+        Continuamos con la demostración del inciso.
+        \begin{proof}
+            Cuando \( k= 0 \), el resultado es claro, porque \( \alpha^0 = \beta^0 = \mathrm{id} \).
+            Sea \( i \) tal que \( \beta \left( i \right) \neq i \).
+            Cuando \( k = 1 \), como \( \beta \) mueve a \( i \) y es disjunta con \( \gamma\),
+            se tiene que
+            \( \gamma \) fija a \( i \). Entonces 
+            \[
+                \alpha ( i ) = 
+                \beta \left( \gamma ( i ) \right)
+                =
+                \beta ( i ).
+            \]
+            Por lo tanto \( \alpha^1 ( i ) = \beta^1 ( i ) \), para cada \( i \) que sea movido
+            por \( \beta \).
+
+            Supongamos que para algún \( k\geq 0 \) se tiene que si \( \beta \) mueve a 
+            \( i \) entonces \( \alpha^k ( i ) = \beta^k ( i ) \).
+            % Del primer inciso del ejercicio \textit{1.12} podemos concluir que 
+            % \( \beta^k ( i ) \) es movido por \( \beta \), ya que al tomar congruencias en los 
+            % subíndices módulo el tamaño del ciclo, obtenemos un elemento del conjunto 
+            % de elementos que son movidos por el ciclo.
+            Por el Lemma \ref{muevela-tambien} tenemos que \( \beta \) mueve a \( \beta^k ( i ) \).
+            Entonces usando la base inductiva (caso \( k=1 \)) tenemos que 
+            \begin{align*}
+                \beta^{k+1} ( i ) 
+                &=
+                \beta \left( \beta^k ( i ) \right) \\
+                &=
+                \alpha \left( \beta^k ( i ) \right).
+            \end{align*}
+            Pero por la hipótesis de inducción \( \alpha^k ( i ) = \beta^k ( i ) \), por lo que 
+            \begin{align*}
+                \beta^{k+1} \left( i \right) 
+                &=
+                \alpha \left( \beta^k ( i ) \right) \\
+                &=
+                \alpha \left( \alpha^k ( i ) \right) \\
+                &=
+                \alpha^{k+1} ( i ).
+            \end{align*}
+            Por el principio de inducción concluimos que \( \alpha^k ( i ) = 
+            \beta^k ( i )\), para toda \( k\geq 0 \).
+        \end{proof}
+    \item
+        Sean \( \alpha \) y \( \beta \) ciclos en \( S_n \) (no suponemos que 
+        tienen la misma longitud). Si existe \( i_1 \) que se mueve por ambas 
+        \( \alpha \) y \( \beta \), y \( \alpha^k \left( i_1 \right) = \beta^k \left( i_1 \right) \) 
+        para todo entero positivo \( k  \), entonces \( \alpha = \beta \).
+        \begin{proof}
+            Supongamos que la longitud de \( \alpha \) es \( s \).
+            Tenemos que \( \alpha \) mueve únicamente a los elementos del conjunto
+            \( \set{i_1,\alpha \left( i_1 \right), \ldots, \alpha^{s-1} \left( i_1 \right)} \), porque
+            \( \alpha \) es un ciclo. Más aún, el primer inciso del Ejercicio 1.12 implica que 
+            para toda \( k\geq 0 \), tenemos que \( \alpha^k \left( i_1 \right) \in 
+            \set{i_1,\alpha \left( i_1 \right), \ldots, \alpha^{k-1} \left( i_1 \right)}\).
+            Lo mismo podemos decir de \( \beta \).
+
+            Usando módulos el tamaño de los ciclos podemos probar que 
+            \[
+                \set{i_1,\alpha ( i_1 ), \ldots, \alpha^{s-1} \left( i_1 \right) }
+                =
+                \set{i_1, \beta \left( i_1 \right), \ldots, \beta^{r-1} \left( i_1 \right) }.
+            \]
+            Donde \( r \) es el tamaño de \( \beta \).
+            Como son ciclos son los únicos a los que mueven, y la hipótesis dice que son iguales.
+        \end{proof}
+\end{enumerate}

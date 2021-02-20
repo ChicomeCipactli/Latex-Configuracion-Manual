@@ -27,6 +27,8 @@ fi
 
 # emptyWord ejemplo
 
+latexFiles=latex
+
 if [ -d $EJEMPLOS/$ejemplo ] ;
 then
     echo -e "\e[1;36mCopiando $ejemplo\e[0m"
@@ -37,8 +39,8 @@ then
             nombre=tarea
         fi
     fi
-    cp -r $EJEMPLOS/$ejemplo $curr_dir/$nombre
-    mv $nombre/main.tex $nombre/$nombre.tex
+    cp -r $EJEMPLOS/$ejemplo $curr_dir/${latexFiles}
+    mv ${latexFiles}/main.tex ${latexFiles}/$nombre.tex
 else 
     echo -e "\e[1;36mcopiando Tarea1\e[0m"
     if [ $# -eq 0 ] ; then
@@ -48,6 +50,6 @@ else
             nombre=tarea
         fi
     fi
-    cp -r $EJEMPLOS/Tarea1 $curr_dir/$nombre
-    mv $nombre/main.tex $nombre/$nombre.tex
+    cp -r $EJEMPLOS/Tarea1 $curr_dir/${latexFiles}
+    mv ${latexFiles}/main.tex ${latexFiles}/$nombre.tex
 fi

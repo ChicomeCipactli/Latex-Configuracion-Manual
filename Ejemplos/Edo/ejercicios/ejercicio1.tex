@@ -1,0 +1,57 @@
+Encuentra la solución general de la ecuación diferencial dada
+\[
+    2t \sen y +y^3 e^t + \left( t^2 \cos y + 3 y^2 e ^t \right) \frac{dy}{dt} = 0
+\]
+\begin{solution}
+    Como típicamente se escribe, identificamos las funciones
+    \( M(t,y)=2t \sen y +y^3 e^t \) y a \( N(t,y)=t^2\cos y +3y^2 e ^t \).
+    Notemos que 
+    \( \frac{\partial M}{\partial y} = 2t \cos y + 3 y^2 e^t = \frac{\partial N}{\partial t} \),
+    por lo que debe existir una función \( \Phi \) tal que \( \frac{\partial \Phi}{\partial t} =
+    M\) y \( \frac{\partial \Phi}{\partial y} = N \) (Según el libro, la verdad no entendí 
+    esa parte de la demostración).
+    Integrando con respecto a \( t \) obtenemos 
+    \begin{align*}
+        c=\Phi(t,y)
+        =
+        \int M(t,y)
+        \, dt
+        &=
+        \int 2t \sen y +y^3 e^t
+        \, dt\\
+        &=
+        t^2\sin y+y^3 e^t + h(y),\quad\text{para alguna función $h$.}
+    \end{align*}
+    % Derivado con respecto a $y$ obtenemos 
+    Por otro lado, haciéndolo con respecto a \( y \) se tiene
+    \begin{align*}
+        c=\Phi(t,y)=
+        \int N(t,y)
+        \, dy
+        &=
+        \int 
+        t^2 \cos y +3y^2 e^t
+        \, dy\\
+        &=
+        t^2 \sin y +y^3 e^t + k(t),\quad\text{para alguna función $k$.}
+    \end{align*}
+    % donde \( h \) cumple que su derivada
+    % \[
+    %     h'(y)
+    %     =
+    %     N(t,y)
+    %     -
+    %     \int \frac{\partial M(t,y)}{\partial y} \, dt
+    % \]
+    Luego $h(y)=k(t)$. Derivando con respecto de $y$ vemos que $h'(y)=0$, por lo que $h$ es 
+    una constante. Como \( \Phi \) es constante y la solución general de la ecuación es 
+    \[
+        \Phi(t,y)
+        =
+        t^2\sin y + y^3 e^t + C,\quad\text{para alguna $C\in\R$,}
+    \]
+    debe suceder que
+    \[
+        t^2 \sin y + y^3 e^t = C'\quad\text{ para alguna $C'\in\R$.}
+    \]
+\end{solution}

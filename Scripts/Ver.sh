@@ -1,6 +1,7 @@
 #! /bin/bash
 
 archivo=main.tex
+lector=zathura
 
 for item in * 
 do
@@ -12,13 +13,13 @@ done
 name=${archivo%.*}
 
 if [ -e ${name}.pdf ] ; then
-    evince ${name}.pdf &
+    ${lector} ${name}.pdf &
 elif [ -e pdfs/*.pdf ] ;
 then
-    evince pdfs/${name}.pdf &
+    ${lector} pdfs/${name}.pdf &
 elif [ -e ../pdfs/${name}.pdf ] ; 
 then
-    evince pdfs/${name}.pdf &
+    ${lector} pdfs/${name}.pdf &
 else
     echo -e "[\e[31mPDF\e[0m not found]"
 fi

@@ -1,0 +1,232 @@
+Describe todos los homomorfismos de \( \Z_{12} \) en sí mismo.
+¿Cuáles de estos son isomorfismos?
+\begin{solution}
+    Cada homomorfismo es determinado por el valor que le asigna al \( \overline{1} \), ya 
+    que si \( \varphi \) es un homomorfismo, para cada \( 1 \leq i \leq 12 \), se
+    cumple que
+    \( \varphi \left( \overline{i} \right) = \sum_{j=1}^{i} \varphi \left( \overline{1} \right) \).
+    A continuación escribiremos en una tabla todas las posibles funciones dependiendo 
+    del valor que le 
+    asignen al \( \overline{1} \).
+
+    La columna cuyo nombre es ``Valores'' corresponde a elementos de \( \Z_{12} \) a los que 
+    se les aplicará cada función \( \varphi_i \). Por ejemplo, en la columna de \( \varphi_2 \) 
+    en el primer renglón (correspondiente al valor \( \overline{1} \)) tenemos el \( \overline{2} \) 
+    ya que le asignamos \( \varphi_2 \left( \overline{1} \right) = \overline{3} \). De esto se 
+    deduce que \( \varphi_{2} \left( \overline{2} \right) = \varphi_2 \left( \overline{1} \right) 
+    + \varphi_2 \left( \overline{1} \right) = \overline{2} + \overline{2}= \overline{4}\). Por 
+    eso en el renglón del valor \( \overline{2} \) en la columna correspondiente a \( \varphi_2 \) 
+    está el valor de \( \overline{4} \).
+    \begin{center}
+        \begin{tabular}{|c||c|c|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            Valores &
+            \( \varphi_1 \) &
+            \( \varphi_2 \) &
+            \( \varphi_3 \) &
+            \( \varphi_4 \) &
+            \( \varphi_5 \) &
+            \( \varphi_6 \) &
+            \( \varphi_7 \) &
+            \( \varphi_8 \) &
+            \( \varphi_9 \) &
+            \( \varphi_{10} \) &
+            \( \varphi_{11} \) &
+            \( \varphi_{12} \) \\
+            \hline
+            \hline
+            % Dominio
+            \( \overline{1} \) &
+            %%%%%%%%%%%%%%%%%%%%
+            \( \overline{1} \) &
+            \( \overline{2} \) &
+            \( \overline{3} \) &
+            \( \overline{4} \) &
+            \( \overline{5} \) &
+            \( \overline{6} \) &
+            \( \overline{7} \) &
+            \( \overline{8} \) &
+            \( \overline{9} \) &
+            \( \overline{10} \) &
+            \( \overline{11} \) &
+            \( \overline{0} \) \\
+            \hline
+            % Dominio
+            \( \overline{2} \) &
+            %%%%%%%%%%%%%%%%%%%%
+            \( \overline{2} \) &
+            \( \overline{4} \) &
+            \( \overline{6} \) &
+            \( \overline{8} \) &
+            \( \overline{10} \) &
+            \( \overline{0} \) &
+            \( \overline{2} \) &
+            \( \overline{4} \) &
+            \( \overline{6} \) &
+            \( \overline{8} \) &
+            \( \overline{10} \) &
+            \( \overline{0} \) \\
+            \hline
+            % Dominio
+            \( \overline{3} \) &
+            %%%%%%%%%%%%%%%%%%%%
+            \( \overline{3} \) &
+            \( \overline{6} \) &
+            \( \overline{9} \) &
+            \( \overline{0} \) &
+            \( \overline{3} \) &
+            \( \overline{6} \) &
+            \( \overline{9} \) &
+            \( \overline{0} \) &
+            \( \overline{3} \) &
+            \( \overline{6} \) &
+            \( \overline{9} \) &
+            \( \overline{0} \) \\
+            \hline
+            % Dominio
+            \( \overline{4} \) &
+            %%%%%%%%%%%%%%%%%%%%
+            \( \overline{4} \) &
+            \( \overline{8} \) &
+            \( \overline{0} \) &
+            \( \overline{4} \) &
+            \( \overline{8} \) &
+            \( \overline{0} \) &
+            \( \overline{4} \) &
+            \( \overline{8} \) &
+            \( \overline{0} \) &
+            \( \overline{4} \) &
+            \( \overline{8} \) &
+            \( \overline{0} \) \\
+            \hline
+            % Dominio
+            \( \overline{5} \) &
+            %%%%%%%%%%%%%%%%%%%%
+            \( \overline{5} \) &
+            \( \overline{10} \) &
+            \( \overline{3} \) &
+            \( \overline{8} \) &
+            \( \overline{1} \) &
+            \( \overline{6} \) &
+            \( \overline{11} \) &
+            \( \overline{4} \) &
+            \( \overline{9} \) &
+            \( \overline{2} \) &
+            \( \overline{7} \) &
+            \( \overline{0} \) \\
+            \hline
+            % Dominio
+            \( \overline{6} \) &
+            %%%%%%%%%%%%%%%%%%%%
+            \( \overline{6} \) &
+            \( \overline{0} \) &
+            \( \overline{6} \) &
+            \( \overline{0} \) &
+            \( \overline{6} \) &
+            \( \overline{0} \) &
+            \( \overline{6} \) &
+            \( \overline{0} \) &
+            \( \overline{6} \) &
+            \( \overline{0} \) &
+            \( \overline{6} \) &
+            \( \overline{0} \) \\
+            \hline
+            % Dominio
+            \( \overline{7} \) &
+            %%%%%%%%%%%%%%%%%%%%
+            \( \overline{7} \) &
+            \( \overline{2} \) &
+            \( \overline{9} \) &
+            \( \overline{4} \) &
+            \( \overline{11} \) &
+            \( \overline{6} \) &
+            \( \overline{1} \) &
+            \( \overline{8} \) &
+            \( \overline{3} \) &
+            \( \overline{10} \) &
+            \( \overline{5} \) &
+            \( \overline{0} \) \\
+            \hline
+            % Dominio
+            \( \overline{8} \) &
+            %%%%%%%%%%%%%%%%%%%%
+            \( \overline{8} \) &
+            \( \overline{4} \) &
+            \( \overline{0} \) &
+            \( \overline{8} \) &
+            \( \overline{4} \) &
+            \( \overline{0} \) &
+            \( \overline{8} \) &
+            \( \overline{4} \) &
+            \( \overline{0} \) &
+            \( \overline{8} \) &
+            \( \overline{4} \) &
+            \( \overline{0} \) \\
+            \hline
+            % Dominio
+            \( \overline{9} \) &
+            %%%%%%%%%%%%%%%%%%%%
+            \( \overline{9} \) &
+            \( \overline{6} \) &
+            \( \overline{3} \) &
+            \( \overline{0} \) &
+            \( \overline{9} \) &
+            \( \overline{6} \) &
+            \( \overline{3} \) &
+            \( \overline{0} \) &
+            \( \overline{9} \) &
+            \( \overline{6} \) &
+            \( \overline{3} \) &
+            \( \overline{0} \) \\
+            \hline
+            % Dominio
+            \( \overline{10} \) &
+            %%%%%%%%%%%%%%%%%%%%
+            \( \overline{10} \) &
+            \( \overline{8} \) &
+            \( \overline{6} \) &
+            \( \overline{4} \) &
+            \( \overline{2} \) &
+            \( \overline{0} \) &
+            \( \overline{10} \) &
+            \( \overline{8} \) &
+            \( \overline{6} \) &
+            \( \overline{4} \) &
+            \( \overline{2} \) &
+            \( \overline{0} \) \\
+            \hline
+            % Dominio
+            \( \overline{11} \) &
+            %%%%%%%%%%%%%%%%%%%%
+            \( \overline{11} \) &
+            \( \overline{10} \) &
+            \( \overline{9} \) &
+            \( \overline{8} \) &
+            \( \overline{7} \) &
+            \( \overline{6} \) &
+            \( \overline{5} \) &
+            \( \overline{4} \) &
+            \( \overline{3} \) &
+            \( \overline{2} \) &
+            \( \overline{1} \) &
+            \( \overline{0} \) \\
+            \hline
+            % Dominio
+            \( \overline{0} \) &
+            %%%%%%%%%%%%%%%%%%%%
+            \( \overline{0} \) &
+            \( \overline{0} \) &
+            \( \overline{0} \) &
+            \( \overline{0} \) &
+            \( \overline{0} \) &
+            \( \overline{0} \) &
+            \( \overline{0} \) &
+            \( \overline{0} \) &
+            \( \overline{0} \) &
+            \( \overline{0} \) &
+            \( \overline{0} \) &
+            \( \overline{0} \) \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{solution}

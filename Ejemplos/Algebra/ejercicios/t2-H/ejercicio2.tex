@@ -1,0 +1,119 @@
+Si \( \varphi:G\to H \) es un isomorfismo, 
+demuestra que \( \abs{\varphi(x)}=\abs{x} \) para toda 
+\( x\in G \). Deduce que cualquier par de grupos isomorfos tienen la misma cantidad de elementos
+de orden \( n \) para cada \( n\in \Z^+ \). ¿El resultado es cierto
+si \( \varphi \) sólo es homomorfismo?
+
+Antes de demostrar lo que pide este ejercicio, demostraremos el siguiente lema.
+\setcounter{section}{2}
+\begin{lemma}
+    \label{lemma:potencias}
+    Sea \( \varphi : G\to H \) un isomorfismo de grupos. Para todo \( n\in \Z \) y todo
+    \( g\in G \) se
+    tiene \( \varphi \left( g^n \right) = \left( \varphi ( g ) \right) ^n \).
+\end{lemma}
+\begin{proof}
+    Probémoslo por inducción sobre \( n \geq 0\).
+    Para \( n=0 \) es un resultado de homomorfismos que 
+    \[
+        \varphi \left( g^0 \right) = \varphi \left( 1_G \right) 
+        =
+        1_{H}
+        =
+        \left( \varphi \left( g \right) \right)^0.
+    \]
+    Supongamos que es cierto para algún \( k \geq 0 \). Entonces debe tenerse para cualquier
+    \( g\in G \) que \( \varphi \left( g^k \right) = \left( \varphi\left( g \right) \right)^k \). 
+    Multiplicando
+    por \( \varphi \left( g \right) \) 
+    \begin{align*}
+        \varphi^{k+1} \left( g \right) 
+        &=
+        \left( \varphi ( g ) \right)^k  \varphi ( g ) \\
+        &=
+        \varphi \left( g^k \right) \varphi ( g ),\quad\text{por hipótesis de inducción,}\\
+        &=
+        \varphi \left( g^k g \right),\quad \text{por ser $\varphi$ un homomorfismo,}\\
+        &=
+        \varphi \left( g^{k+1} \right).
+    \end{align*}
+    Por inducción se concluye que el resultado es cierto para toda \( n\geq 0 \).
+    Sin embargo, también se sabe que 
+    \( \varphi \left( g^{-1}\right) = \left( \varphi ( g ) \right) ^{-1} \). Por lo tanto, 
+    si \( n \geq 0 \) se tiene 
+    \begin{align*}
+        \varphi \left( g^{-n} \right) 
+        &=
+        \varphi \left( \left( g^{-1} \right) ^n \right) \\
+        &=
+        \left( \varphi \left( g^{-1} \right) \right) ^{n},
+        \quad\text{pues es lo que acabamos de probar,}\\
+        &=
+        \left( \varphi ( g ) ^{-1} \right) ^n\\
+        &=
+        \varphi ( g ) ^{-n}.
+    \end{align*}
+    Por lo tanto, se extiende el resultado para toda \( n \in \Z \).
+\end{proof}
+
+También nos será de utilidad el siguiente resultado.
+
+\begin{lemma}
+    \label{lemma:inversa-homomorfismo}
+    Sea \( f: G\to H \) un isomorfismo. Su inversa \( f^{-1} \) también es un homomorfismo
+    de \( H \) a \( G \).
+\end{lemma}
+\begin{proof}
+    Sean \( h_1,h_2\in H \), 
+    y notemos que \( f^{-1}(h_1), f^{-1}(h_2) \in G \). Por ser \( f \) un homomorfismo, al 
+    aplicarla en estos elementos se tiene
+    \begin{align*}
+        f
+        \left( f^{-1} (h_1) f^{-1} ( h_2 ) \right) 
+        &=
+        f \left( f^{-1} (h_1) \right) 
+        f \left( f^{-1}(h_2) \right) \\
+        &= h_1 h_2.
+    \end{align*}
+    Aplicando \( f^{-1} \) obtenemos 
+    \[
+        f^{-1}(h_1)
+        f^{-1}(h_2)
+        =
+        f^{-1}(h_1h_2).
+    \]
+    Esto implica que \( f^{-1} \) también es un homomorfismo. 
+\end{proof}
+
+Ahora sí, procedemos a demostrar que \( \abs{\varphi ( x )} = \abs{x} \)
+para toda \( x\in G \), cuando \( \varphi \) es un isomorfismo.
+\begin{proof}
+    Sea \( x\in G \).
+    Por el {Lema \ref{lemma:potencias}} se tiene 
+    \[
+        1_H = 
+        \varphi \left( 1_G \right) =
+        \varphi \left( x^{\abs{x}} \right) 
+        =
+        \varphi ( x )^{\abs{x}}.
+    \]
+    Entonces \( \abs{\varphi(x)} \leq \abs{x} \).
+    Por otro lado se tiene también que 
+    \[
+        1_H = \varphi ( x ) ^{\abs{\varphi(x)}}
+        =
+        \varphi \left( x^{\abs{\varphi(x)}} \right).
+    \]
+    Tomando inversos se llega a que 
+    \begin{align*}
+        x^{\abs{\varphi(x)}}
+        &=
+        \varphi^{-1} \left( 1_H \right) \\
+        &=
+        1_G.
+    \end{align*}
+    El último paso se debe a que \( \varphi^{-1} \) es un homomorfismos, y los homomorfismos
+    envían los neutros a neutros.
+    De aquí podemos concluir que \( \abs{\varphi ( x ) } \geq \abs{x} \), y por lo tanto
+    \( \abs{x} = \abs{\varphi ( x )} \).
+\end{proof}

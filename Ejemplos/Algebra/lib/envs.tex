@@ -1,0 +1,45 @@
+% Definiciones de teoremas, definiciones...
+
+% \newtheorem{axiom}{Axioma}
+% \theoremstyle{definition}
+% \newtheorem{definition}{Definición}[section]
+% \newtheorem{theorem}{Teorema}[section]
+\newtheorem{lemma}{Lema}[section]
+% \newtheorem{corollary}[theorem]{Corolario}
+% \newtheorem{proposition}[theorem]{Proposición}
+% \theoremstyle{remark}
+% \newtheorem*{note}{\bfseries Nota}
+% 
+% \crefname{definition}{Definición}{Definiciones}
+% \crefname{axiom}{Axioma}{Axiomas}
+% \crefname{theorem}{Teorema}{Teoremas}
+% \crefname{lemma}{Lema}{Lemas}
+% \crefname{corollary}{Corolario}{Corolarios}
+% \crefname{proposition}{Proposición}{Proposiciones}
+% \crefname{section}{Sección}{Secciones}
+% 
+% \newenvironment{solution}{\begin{proof}[Solución]}{\end{proof}}
+% \renewcommand{\qedsymbol}{$\blacksquare$}
+% 
+% \newcommand{\QED}{$\hfill\blacksquare$} % Pone el cuadrito negro hasta el final de la línea
+% \newcommand{\EndSol}{$\hfill\square$} % Cuadrito blanco al final al final de la línea
+
+\renewenvironment{proof}[1][\textbf{Demostración}]
+    {
+        \par\medskip\noindent #1.
+        \rmfamily
+    }
+    {
+        \par
+        $\hfill\blacksquare$
+    }
+
+\newenvironment{solution}[1][\textbf{Solución}]
+    {
+        \par\medskip\noindent #1.
+        \rmfamily
+    }
+    {
+        \par
+        $\hfill\blacksquare$
+    }

@@ -1,0 +1,23 @@
+Calcula sobre la región \( R \):
+\[
+    \iint\limits_R \frac{y}{1+x^2} dydx,\quad R:[0,2]\times \left[ -1,1 \right].
+\]
+\begin{solution}
+    \begin{align*}
+        \int_{0}^2
+        \int_{-1}^1
+        \frac{y}{1+x^2} \,dy\,dx
+        &=
+        \int_0^2
+        \frac{1}{1+x^2} 
+        \int_{-1}^1
+        y\,dy
+        \,dx\\
+        &=
+        \int_0^2
+        \frac{0}{1+x^2} \,dx,
+        \quad\text{ya que $f(y)=y$ es impar,}\\
+        &=
+        0.
+    \end{align*}
+\end{solution}
