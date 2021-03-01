@@ -24,22 +24,47 @@
 % \newcommand{\QED}{$\hfill\blacksquare$} % Pone el cuadrito negro hasta el final de la línea
 % \newcommand{\EndSol}{$\hfill\square$} % Cuadrito blanco al final al final de la línea
 
-\renewenvironment{proof}[1][\textbf{Demostración}]
-    {
-        \par\medskip\noindent #1.
-        \rmfamily
-    }
-    {
-        \par
-        $\hfill\blacksquare$
-    }
+\renewenvironment{proof}[1][\textbf{\textit{Demostración}}]{
+     \par\medskip\noindent \textcolor[rgb]{0.2,0,0.6}{#1.}
+     \rmfamily
+}{
+    \par
+    $\hfill\textcolor[rgb]{0.2,0,0.6}{\textbf{QED}}$\\
+}
 
-\newenvironment{solution}[1][\textbf{Solución}]
-    {
-        \par\medskip\noindent #1.
+\newenvironment{solution}[1][\textbf{\textit{Solución}}]{
+     \par\medskip\noindent \textcolor[rgb]{0.2,0,0.6}{#1.}
+     \rmfamily
+}{
+    \par
+    $\hfill\textcolor[rgb]{0.2,0,0.6}{\textbf{S}}$\\
+}
+
+\renewenvironment{boxed} % [1][]
+{
+    \begin{center}
+    \begin{tabular}{|p{0.7\textwidth}|}
+    \hline
+}{ 
+    \\
+    \hline
+    \end{tabular} 
+    \end{center}
+}
+
+\newcounter{problem}
+\newenvironment{problem}[1][\theproblem]{
+    \begin{tcolorbox}[colback=red!50,colframe=red!50]
+        \refstepcounter{problem}
+        % \par\medskip
+        % \noindent 
+        % \color[rgb]{0.1,0.1,0.1}
+        % \color[rgb]{0.1,0,0.5}
+        \textbf{Problema~#1.}
         \rmfamily
-    }
-    {
-        \par
-        $\hfill\blacksquare$
-    }
+}{
+    \end{tcolorbox}
+    \medskip
+}
+% \newtheorem{problem}{Problema}
+

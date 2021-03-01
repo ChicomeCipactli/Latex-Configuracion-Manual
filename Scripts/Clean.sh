@@ -13,18 +13,18 @@ name=${archivo%.*}
 
 if [ ! -d pdfs ] ;
 then 
-    echo -e "[\e[34mkdir\e[0m pdfs]"
+    echo -e "[\e[34mmkdir\e[0m pdfs]"
     mkdir pdfs
 fi
 
 if [ ! -d build ] ;
 then 
-    echo -e "[\e[34mkdir\e[0m build]"
+    echo -e "[\e[34mmkdir\e[0m build]"
     mkdir build
 fi
 
 if [ ! -d logs ] ; then 
-    echo -e "[\e[34mkdir\e[0m logs]"
+    echo -e "[\e[34mmkdir\e[0m logs]"
     mkdir logs
 fi
 

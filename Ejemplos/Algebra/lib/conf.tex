@@ -18,7 +18,7 @@
 \usepackage[spanish, mexico]{babel}
 % \usepackage{csquotes}
 % \usepackage{amsbsy}
-% \usepackage[spanish]{babel}
+\usepackage[spanish]{babel}
 \usepackage{datetime}
 % \usepackage{natbib}
 % \usepackage{dsfont} 
@@ -48,6 +48,8 @@
 \usepackage{hyperref}
 \usepackage[spanish]{cleveref}
 
+\usepackage[nottoc]{tocbibind}
+
 %Figuras numeradas
 \usepackage{chngcntr}
     \counterwithin{figure}{section}
@@ -56,4 +58,16 @@
 \newdateformat{mydate}{\THEMONTH \THEDAY, \THEYEAR}
 % definir fecha exacta
 \newdate{hmw}{07}{09}{2019}
+
+\usepackage{tcolorbox}
+
+\usepackage{fancyhdr}
+
+\newcounter{tarea}
+
+\pagestyle{fancy}
+    \fancyhf{}
+    \rhead{\fecha}
+    \lhead{\autor}
+    \rfoot{Página \thepage}
 

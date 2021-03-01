@@ -7,49 +7,20 @@ PROMPT=">> "
 
 nombre=$1
 
-# function emptyWord( ){
-#     if [ -z $1 ] ; then
-#         word="word"
-#     fi
-#     $1=$word
-# }
-
-
 echo -e "\e[1;36m¿Cuál ejemplo quieres que mueva?\e[0m"
-echo -e "\e[1;36mdefault:\e[0m Tarea1"
 ls $EJEMPLOS
 
 read -p "${PROMPT}" ejemplo 
 
 if [ -z $ejemplo ] ; then 
-    ejemplo=Tarea1
-fi
-
-# emptyWord ejemplo
-
-latexFiles=latex
-
-if [ -d $EJEMPLOS/$ejemplo ] ;
+    ejemplo=Algebra
+elif [ ! -e ${EJEMPLOS}/${ejemplo} ] ; 
 then
-    echo -e "\e[1;36mCopiando $ejemplo\e[0m"
-    if [ $# -eq 0 ] ; then
-        echo -e "\e[1;36m¿Cuál es el nuevo nombre?\e[0m"
-        read -p "${PROMPT}" nombre
-        if [ -z $nombre ] ; then
-            nombre=tarea
-        fi
-    fi
-    cp -r $EJEMPLOS/$ejemplo $curr_dir/${latexFiles}
-    mv ${latexFiles}/main.tex ${latexFiles}/$nombre.tex
-else 
-    echo -e "\e[1;36mcopiando Tarea1\e[0m"
-    if [ $# -eq 0 ] ; then
-        echo -e "\e[1;36m¿Cuál es el nuevo nombre?\e[0m"
-        read -p "${POMPT}" nombre
-        if [ -z $nombre ] ; then
-            nombre=tarea
-        fi
-    fi
-    cp -r $EJEMPLOS/Tarea1 $curr_dir/${latexFiles}
-    mv ${latexFiles}/main.tex ${latexFiles}/$nombre.tex
+    ejemplo=Algebra
 fi
+
+no_de_tareas=`ls | wc -l`
+no_de_tareas=$((no_de_tareas+1))
+
+echo -e "\e[1;36mCopiando $ejemplo\e[0m"
+cp -r $EJEMPLOS/$ejemplo $curr_dir/Tarea${no_de_tareas}

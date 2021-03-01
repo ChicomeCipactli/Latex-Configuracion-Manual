@@ -1,5 +1,4 @@
 % Conjuntos
-
 \newcommand{\R}{
     \mathbb{R}
 }
@@ -34,7 +33,6 @@
             #1
         \right)
     }
-
     % Conjuntos de Álgebra Lineal
     \newcommand{\kernel}[1]{
         \mathrm{Ker}
@@ -56,15 +54,11 @@
     }
 
 
-% \newcommand{\Borel}[1]{
-%     \mathcal{B}\left(#1\right)
-% }
 \newcommand{\set}[1]{
     \left\{
         #1
     \right\}
 }
-
 % Funciones
     % Normas
     \providecommand{\abs}[1]{
@@ -77,37 +71,31 @@
             #1
         \right\rVert
     }
-    % \providecommand{\abs}[1]{
-    %     \left\lvert
-    %         #1
-    %     \right\rvert
-    % }
     \providecommand{\prodint}[1]{
         \left\langle
             #1
         \right\rangle
     }
     % Probabilidad
-    % \newcommand{\Esp}[1]{
-    %     \mathbb{E}
-    %     \left[
-    %         #1
-    %     \right]
-    % }
-    % \newcommand{\Prob}[1]{
-    %     \mathbb{P}
-    %     \left[
-    %         #1
-    %     \right]
-    % }
-    % Integrales
-    \newcommand{\integral}[3]{
-        \int
-        % límites
-        _{#1}^{#2}
-        % integrando
-        #3
+    \newcommand{\Esp}[1]{
+        \mathbb{E}
+        \left[
+            #1
+        \right]
     }
+    \newcommand{\Prob}[1]{
+        \mathbb{P}
+        \left[
+            #1
+        \right]
+    }
+    \newcommand{\ind}[2]{
+        \mathbb{I}_{#1}
+        \left(
+            #2
+        \right)
+    }
+    % Integrales
     \newcommand{\riemann}[4]{
         \int
         % límites
@@ -117,33 +105,13 @@
         % referencia
         \,d#4
     }
-    \newcommand{\lebesgue}[3]{
-        \int
-        % límites ó conjunto
-        _{#1}
-        % integrando
-        #2
-        % referencia
-        \,d#3
-    }
-    \newcommand{\stieltjes}[3]{
-        \int
-        % limites
-        _{#1}^{#2}
-        % integrando
-        #3
-        % referencia
-        \,F(dx)
-    }
     % Mapeos
     \newcommand{\To}{
         \longrightarrow
-    }%-->
+    } %-->
     \newcommand{\mTo}{
         \longmapsto
     } %I-->
-
-
 % Lógica
     \newcommand{\ssi}{
         \Leftrightarrow
@@ -153,22 +121,15 @@
     } %=>
     \newcommand{\Ent}{
         \Longrightarrow
-    }%==>
+    } %==>
     \newcommand{\EntL}{
         \Longleftarrow
-    }%<==
+    } %<==
 
 % Letras especiales
-\newcommand{\ohm}{
-    \omega
-}
-\newcommand{\Ohm}{
-    \Omega
-}
 \newcommand{\eps}{
     \varepsilon
 }
-
 % Álgebra Lineal
     % Dimensiones
     \newcommand{\rango}[1]{
@@ -189,5 +150,3 @@
             #2
         \right)
     }
-
-

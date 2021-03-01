@@ -1,35 +1,13 @@
-\makeatletter
-    \def\@maketitle {
-        \newpage
-        \begin{center}
-            \let \footnote \thanks
-            {
-                \LARGE \@title{} 
-                {
-                    \large \itshape \par
-                }
-                \LARGE \par
-            }
-            \vskip 1.5em
-            {
-                \large
-                \begin{tabular}[t]{cc}
-                    \begin{tabular}{c}
-                        \@author 
-                    \end{tabular}
-                    &
-                    \begin{tabular}{c}
-                        \@date
-                    \end{tabular}
-                \end{tabular}
-                \par
-            }
-            \vskip 1em
-            \hrule
-            \vskip 0.1em
-            \hrule
-        \end{center}
-        \par
-        \vskip 1.5 em
+\newcommand{\titulo}{
+    \textsc{
+        {\textbf{Tarea \thetarea.} Calculo diferencial e integral IV}
     }
-\makeatother
+}
+
+\newcommand{\autor}{
+    \textbf{Estudiante:} Juan Armando Parra Flores
+}
+
+\newcommand{\fecha}{
+    \textbf{Fecha:} \today
+}
