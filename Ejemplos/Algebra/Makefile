@@ -7,4 +7,4 @@ clean:
 	@~/Latex-Configuracion-Manual/Scripts/Clean.sh 
 
 clear:
-	@rm -r build pdfs logs
+	@rm -r build logs pdfs

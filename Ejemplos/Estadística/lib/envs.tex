@@ -29,7 +29,8 @@
      \rmfamily
 }{
     \par
-    $\hfill\textcolor[rgb]{0.2,0,0.6}{\textbf{QED}}$\\
+    % $\hfill\textcolor[rgb]{0.2,0,0.6}{\textbf{QED}}$\\
+    $\hfill\textcolor[rgb]{0.2,0,0.6}{\blacksquare}$\\
 }
 
 \newenvironment{solution}[1][\textbf{\textit{Solución}}]{
@@ -37,7 +38,8 @@
      \rmfamily
 }{
     \par
-    $\hfill\textcolor[rgb]{0.2,0,0.6}{\textbf{S}}$\\
+    % $\hfill\textcolor[rgb]{0.2,0,0.6}{\textbf{S}}$\\
+    $\hfill\textcolor[rgb]{0.2,0,0.6}{\square}$\\
 }
 
 \renewenvironment{boxed} % [1][]
@@ -54,7 +56,7 @@
 
 \newcounter{problem}
 \newenvironment{problem}[1][\theproblem]{
-    \begin{tcolorbox}[colback=orange!50,colframe=orange!50]
+    \begin{tcolorbox}[colback=blue!50,colframe=blue!50]
         \refstepcounter{problem}
         % \par\medskip
         % \noindent 
@@ -66,5 +68,3 @@
     \end{tcolorbox}
     \medskip
 }
-% \newtheorem{problem}{Problema}
-
