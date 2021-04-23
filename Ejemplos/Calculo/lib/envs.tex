@@ -24,22 +24,22 @@
 % \newcommand{\QED}{$\hfill\blacksquare$} % Pone el cuadrito negro hasta el final de la línea
 % \newcommand{\EndSol}{$\hfill\square$} % Cuadrito blanco al final al final de la línea
 
-\renewenvironment{proof}[1][\textbf{\textit{Demostración}}]{
-     \par\medskip\noindent \textcolor[rgb]{0.2,0,0.6}{#1.}
+\newenvironment{proof}[1][\textbf{\textit{Demostración}}]{
+     \par\medskip\noindent \textcolor[rgb]{0.6,0,0}{#1.}
      \rmfamily
 }{
     \par
     % $\hfill\textcolor[rgb]{0.2,0,0.6}{\textbf{QED}}$\\
-    $\hfill\textcolor[rgb]{0.2,0,0.6}{\blacksquare}$\\
+    $\hfill\textcolor[rgb]{0.6,0,0}{\blacksquare}$\\
 }
 
 \newenvironment{solution}[1][\textbf{\textit{Solución}}]{
-     \par\medskip\noindent \textcolor[rgb]{0.2,0,0.6}{#1.}
+     \par\medskip\noindent \textcolor[rgb]{0.6,0,0}{#1.}
      \rmfamily
 }{
     \par
     % $\hfill\textcolor[rgb]{0.2,0,0.6}{\textbf{S}}$\\
-    $\hfill\textcolor[rgb]{0.2,0,0.6}{\square}$\\
+    $\hfill\textcolor[rgb]{0.6,0,0}{\square}$\\
 }
 
 \renewenvironment{boxed} % [1][]
@@ -56,7 +56,7 @@
 
 \newcounter{problem}
 \newenvironment{problem}[1][\theproblem]{
-    \begin{tcolorbox}[colback=red!50,colframe=red!50]
+    \begin{tcolorbox}[colback=red!20,colframe=red!50]
         \refstepcounter{problem}
         % \par\medskip
         % \noindent 
