@@ -1,9 +1,9 @@
 \usepackage[T1]{fontenc}
 \usepackage[
-    left=3.5cm,
-    right=3.5cm,
-    top=2cm,
-    bottom=3cm
+    left = 4.5cm,
+    right = 4.5cm,
+    top = 2cm,
+    bottom = 3cm
 ]{geometry}
 \usepackage{
     amsmath,
@@ -61,7 +61,7 @@
 % definir fecha exacta
 \newdate{hmw}{07}{09}{2019}
 
-\usepackage{tcolorbox}
+\usepackage[breakable]{tcolorbox}
 
 \usepackage{fancyhdr}
 
@@ -71,5 +71,42 @@
     \fancyhf{}
     \rhead{\fecha}
     \lhead{\autor}
-    \rfoot{Página \thepage}
+    \rfoot{\textit{\textbf{Página \thepage}}}
+% longitud de indentación 
+\setlength{\parindent}{1cm}
 
+% definición de colores
+    \definecolor{rojo1}{rgb}{0.6,0,0}
+    \definecolor{azul1}{rgb}{0.2,0,0.6}
+    \definecolor{verde1}{rgb}{0,0.4,0}
+    \definecolor{naranja1}{rgb}{0.8,0.2,0.1}
+    \definecolor{morado1}{rgb}{0.6,0,0.3}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}

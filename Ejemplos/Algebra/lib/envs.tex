@@ -42,18 +42,6 @@
     $\hfill\textcolor[rgb]{0.6,0,0.3}{\square}$\\
 }
 
-\renewenvironment{boxed} % [1][]
-{
-    \begin{center}
-    \begin{tabular}{|p{0.7\textwidth}|}
-    \hline
-}{ 
-    \\
-    \hline
-    \end{tabular} 
-    \end{center}
-}
-
 \newcounter{problem}
 \newenvironment{problem}[1][\theproblem]{
     \begin{tcolorbox}[colback=purple!20,colframe=purple!50]
@@ -63,6 +51,32 @@
         % \color[rgb]{0.1,0.1,0.1}
         % \color[rgb]{0.1,0,0.5}
         \textbf{Problema~#1.}
+        \rmfamily
+}{
+    \end{tcolorbox}
+    \medskip
+}
+
+\newcounter{lemma}
+\newenvironment{lemma}[1][\thelemma]{
+    \begin{tcolorbox}[colback=white!20,colframe=purple!50]
+        \refstepcounter{lemma}
+        \noindent
+        \color[rgb]{0.6,0,0.3}
+        \textbf{Lema~#1.}
+        \rmfamily
+}{
+    \end{tcolorbox}
+    \medskip
+}
+
+\newcounter{theorem}
+\newenvironment{theorem}[1][\thetheorem]{
+    \begin{tcolorbox}[colback=white!20,colframe=purple!50]
+        \refstepcounter{theorem}
+        \par\medskip
+        \noindent
+        \textbf{Teorema~#1.}
         \rmfamily
 }{
     \end{tcolorbox}

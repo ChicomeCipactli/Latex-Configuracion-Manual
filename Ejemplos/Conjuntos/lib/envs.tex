@@ -1,23 +1,5 @@
 % Definiciones de teoremas, definiciones...
 
-% \newtheorem{axiom}{Axioma}
-% \theoremstyle{definition}
-% \newtheorem{definition}{Definición}[section]
-% \newtheorem{theorem}{Teorema}[section]
-% \newtheorem{lemma}{Lema}[section]
-% \newtheorem{corollary}[theorem]{Corolario}
-% \newtheorem{proposition}[theorem]{Proposición}
-% \theoremstyle{remark}
-% \newtheorem*{note}{\bfseries Nota}
-% 
-% \crefname{definition}{Definición}{Definiciones}
-% \crefname{axiom}{Axioma}{Axiomas}
-% \crefname{theorem}{Teorema}{Teoremas}
-% \crefname{lemma}{Lema}{Lemas}
-% \crefname{corollary}{Corolario}{Corolarios}
-% \crefname{proposition}{Proposición}{Proposiciones}
-% \crefname{section}{Sección}{Secciones}
-% 
 % \newenvironment{solution}{\begin{proof}[Solución]}{\end{proof}}
 % \renewcommand{\qedsymbol}{$\blacksquare$}
 % 
@@ -26,21 +8,19 @@
 
 % \renewenvironment{proof}[1][\textbf{\textit{Demostración}}]{
 \newenvironment{proof}[1][\textbf{\textit{Demostración}}]{
-     \par\medskip\noindent \textcolor[rgb]{0.2,0,0.6}{#1.}
-     \rmfamily
+    \par\medskip\noindent \textcolor{azul1}{#1.}
+    \rmfamily
 }{
-    \par
-    % $\hfill\textcolor[rgb]{0.2,0,0.6}{\textbf{QED}}$\\
-    $\hfill\textcolor[rgb]{0.2,0,0.6}{\blacksquare}$\\
+    $\hfill\textcolor{azul1}{\blacksquare}$\\
+    \medskip
 }
 
 \newenvironment{solution}[1][\textbf{\textit{Solución}}]{
-     \par\medskip\noindent \textcolor[rgb]{0.2,0,0.6}{#1.}
-     \rmfamily
+    \par\medskip\noindent \textcolor{azul1}{#1.}
+    \rmfamily
 }{
-    \par
-    % $\hfill\textcolor[rgb]{0.2,0,0.6}{\textbf{S}}$\\
-    $\hfill\textcolor[rgb]{0.2,0,0.6}{\square}$\\
+    $\hfill\textcolor{azul1}{\square}$\\
+    \medskip
 }
 
 \renewenvironment{boxed} % [1][]
@@ -57,13 +37,24 @@
 
 \newcounter{problem}
 \newenvironment{problem}[1][\theproblem]{
-    \begin{tcolorbox}[colback=blue!20,colframe=blue!50]
+    \begin{tcolorbox}[colback=blue!20,colframe=blue!50,before upper={\parindent15pt},breakable]
         \refstepcounter{problem}
         % \par\medskip
-        % \noindent 
-        % \color[rgb]{0.1,0.1,0.1}
-        % \color[rgb]{0.1,0,0.5}
+        \noindent 
         \textbf{Problema~#1.}
+        \rmfamily
+}{
+    \end{tcolorbox}
+    \medskip
+}
+
+\newcounter{lemma}
+\newenvironment{lemma}[1][\thelemma]{
+    \begin{tcolorbox}[colback=white!20,colframe=blue!50]
+        \refstepcounter{lemma}
+        \noindent
+        \color[rgb]{0.2,0,0.6}
+        \textbf{Lema~#1.}
         \rmfamily
 }{
     \end{tcolorbox}

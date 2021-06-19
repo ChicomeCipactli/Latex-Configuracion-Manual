@@ -1,7 +1,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[
-    left = 4cm,
-    right = 4cm,
+    left = 4.5cm,
+    right = 4.5cm,
     top = 2cm,
     bottom = 3cm
 ]{geometry}
@@ -61,7 +61,7 @@
 % definir fecha exacta
 \newdate{hmw}{07}{09}{2019}
 
-\usepackage{tcolorbox}
+\usepackage[breakable]{tcolorbox}
 
 \usepackage{fancyhdr}
 
@@ -72,4 +72,12 @@
     \rhead{\fecha}
     \lhead{\autor}
     \rfoot{\textit{\textbf{Página \thepage}}}
+% longitud de indentación 
+\setlength{\parindent}{1cm}
 
+% definición de colores
+    \definecolor{rojo1}{rgb}{0.6,0,0}
+    \definecolor{azul1}{rgb}{0.2,0,0.6}
+    \definecolor{verde1}{rgb}{0,0.4,0}
+    \definecolor{naranja1}{rgb}{0.8,0.2,0.1}
+    \definecolor{morado1}{rgb}{0.6,0,0.3}
