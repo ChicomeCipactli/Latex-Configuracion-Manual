@@ -3,4 +3,4 @@
 vim tree.files
 wait
 
-python $HOME/Latex-Configuracion-Manual/Scripts/src/LCM-create-exs.py
+python $HOME/Latex-Configuracion-Manual/Scripts/src/LCM-tree.py
