@@ -1,0 +1,2 @@
+clean:
+	@cp build/*.pdf .
