@@ -1,5 +1,7 @@
 # Latex-Configuracion-Manual
 
+## Instalación
+
 Agrega lo siguiente a tu .zshrc o .bashrc
 
 ```
