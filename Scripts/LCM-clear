@@ -1,0 +1,3 @@
+#! /bin/bash
+
+rm -rf $(ls -I lib -I ejercicios -I src -I img -I *.tex -I *.bib -I makefile)

@@ -1,2 +1,8 @@
 clean:
-	@cp build/*.pdf .
+	@LCM-clean
+
+clear:
+	@LCM-clear
+
+tree:
+	@LCM-tree
