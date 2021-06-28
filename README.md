@@ -1,5 +1,13 @@
 # Latex-Configuracion-Manual
 
+Este proyecto es una configuración que puede ser de utilidad al momento de empezar un nuevo proyecto cuando quieras hacer 
+tus tareas de matemáticas en [LaTeX](https://en.wikipedia.org/wiki/LaTeX).
+El objetivo de esto es evitar copiar archivos y creando tu entorno de trabajo 
+a mano, ya que sin darte cuenta desperdicias un porcentaje considerable de tu vida 
+haciendo clicks que puedes evitar.
+Sobre todo también es útil por si quieres mantener la configuración de la tarea anterior o si quieres modificar la configuración 
+para tareas futuras.
+
 ## Dependencias
 
 Esta configuración está siendo desarrollada desde un sistema basado en [Arch Linux](https://wiki.archlinux.org/title/Arch_Linux),
@@ -38,3 +46,9 @@ Cada uno es una plantilla de un proyecto de [LaTeX](https://en.wikipedia.org/wik
 La configuración de dichos proyectos depende de cómo quiero que funcionen mis tareas, pero puedes modificar sus nombres y toda 
 la configuración para que se adapte a tu forma de trabajar, siempre y cuando no elimines el archivo `makefile` y seas cuidadoso con el archivo `tree.files`.
 
+En la sección de [Uso](## Uso) verás cómo generar el árbol de ejercicios. Por defecto cada ejercicio tiene nombre `ej<+>.tex` pero puedes modificarlo
+cada vez que comiences un nuevo proyecto con el proceso que se describe en dicha sección.
+
+## Uso
+
+Digamos que vas a empezar una nueva tarea
