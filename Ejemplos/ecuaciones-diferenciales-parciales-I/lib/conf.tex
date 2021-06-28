@@ -1,0 +1,87 @@
+\usepackage[T1]{fontenc}
+\usepackage[
+    left=7cm,
+    right=2cm,
+    top=2cm,
+    bottom=3cm
+]{geometry}
+\usepackage{
+    amsmath,
+    amsfonts,
+    bbm
+}
+% Fuentes bonitas
+\usepackage{newpxtext,newpxmath}
+
+\usepackage{enumerate}
+% \usepackage{titling}
+% \usepackage{tipa}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, mexico]{babel}
+% \usepackage{csquotes}
+% \usepackage{amsbsy}
+\usepackage[spanish]{babel}
+\usepackage{datetime}
+% \usepackage{natbib}
+% \usepackage{dsfont} 
+% \usepackage{gensymb}
+% \usepackage{textcomp}
+\usepackage{flushend}
+\usepackage{anyfontsize}
+
+%%floor and ceilling
+\usepackage{mathtools}
+%% includegraphics command.
+\usepackage{graphicx}
+%% various useful mathematical symbols
+\usepackage{amssymb}
+%% extended theorem environments
+% \usepackage{amsthm}
+
+
+% Section size
+\usepackage{sectsty}
+    \sectionfont{\fontsize{13}{11}\selectfont}
+
+\usepackage{float}
+\usepackage{mathrsfs}
+
+%Ref
+\usepackage{hyperref}
+\usepackage[spanish]{cleveref}
+
+\usepackage[nottoc]{tocbibind}
+
+%Figuras numeradas
+\usepackage{chngcntr}
+    \counterwithin{figure}{section}
+
+% formato personalizado
+\newdateformat{mydate}{\THEMONTH \THEDAY, \THEYEAR}
+% definir fecha exacta
+\newdate{hmw}{07}{09}{2019}
+
+
+% ---- Colores -----
+
+    % Colores
+
+\usepackage[dvipsnames]{xcolor}
+    
+    % Cajas con colores
+
+\usepackage{tcolorbox}
+
+
+\usepackage{fancyhdr}
+
+\newcounter{tarea}
+
+\pagestyle{fancy}
+    \fancyhf{}
+    \rhead{\fecha}
+    \lhead{\autor}
+    \rfoot{\textit{\textbf{Página \thepage}}}
+
+
+\setlength\parindent{0.5cm}
