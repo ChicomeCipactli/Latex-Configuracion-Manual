@@ -5,38 +5,27 @@ import sys
 import readline
 import shutil
 
-path_proyecto = '/home/juamnito/Latex-Configuracion-Manual'
-path_ejemplos = path_proyecto + '/Ejemplos'
+# ---- Propios ----
 
-class Completer(object):
-
-    def __init__(self, options):
-        self.options = sorted(options)
-
-    def complete(self, text, state):
-        if state == 0:  # on first trigger, build possible matches
-            if text:
-                self.matches = [ s for s in self.options if s.startswith(text) ]
-            else:
-                self.matches = self.options[:]
-        try:
-            return self.matches[state]
-        except IndexError:
-            return None
-
-ejemplos = os.listdir(path_ejemplos)
-
-completer = Completer(ejemplos)
-readline.set_completer(completer.complete)
-readline.parse_and_bind('tab: complete')
+from routes import *
+from completer import Completer
+from readExampleConfig import reader
 
 def pideEjemplo():
-    print("¿Cuál ejemplo de proyecto quieres copiar?")
-    print(' '.join(ejemplos))
-    
+    ejemplos = os.listdir(ejemplos_dir)
+
+    completer = Completer(ejemplos)
+    readline.set_completer(completer.complete)
+    readline.parse_and_bind('tab: complete')
+
+    print("¿Cuál ejemplo de proyecto quieres copiar?\n")
+    print('-', '\n- '.join(ejemplos), '\n')
+
     for _ in range(3):
         ejemplo = input("> ")
+
         if ejemplo in ejemplos:
+
             print("¿Con qué nombre?")
             nombre = input("> ")
 
@@ -52,9 +41,16 @@ def pideEjemplo():
 print("\nBienvenido a Latex-Configuracion-Manual\n")
 
 ejemplo, nombre = pideEjemplo()
-currdir = os.getcwd()
 
-shutil.copytree(path_ejemplos + "/" + ejemplo, currdir + "/" + nombre)
+ejemplo_dir = ejemplos_dir + "/" + ejemplo
+ejemplo_tex_dir = ejemplo_dir + "/" + "tex"
 
-os.chdir(currdir + "/" + nombre)
-os.rename("main.tex", ejemplo + "-" + nombre + "-Juan_Parra.tex")
+new_dir = curr_dir + "/" + nombre
+shutil.copytree(ejemplo_tex_dir, new_dir)
+
+r = reader(ejemplo_dir, nombre, ejemplo)
+
+new_main_tex = r.main
+
+os.chdir(new_dir)
+os.rename("main.tex", new_main_tex)

@@ -15,6 +15,7 @@ flags = [
 ]
 
 tabspaces = 4
+
 tex = ["ej", ".tex"]
 # tabspaces = int(input("tabspaces: "))
 
