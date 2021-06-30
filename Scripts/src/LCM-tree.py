@@ -5,7 +5,11 @@ import sys
 from shutil import copyfile
 import shutil
 
-dir_path = os.path.dirname(os.path.realpath(__file__)) 
+# ---- Propios -----
+
+from readExampleConfig import reader
+
+nombre = os.path.dirname(os.path.realpath(__file__)) 
 treeFile = "tree.files"          # archivo de árbol de ejercicios
 
 flags = [
@@ -16,22 +20,29 @@ flags = [
 
 tabspaces = 4
 
+r = reader()
+
 tex = ["ej", ".tex"]
-# tabspaces = int(input("tabspaces: "))
+
+if not os.path.isfile(treeFile):
+    print("No encuentro el archivo tree.files")
+    sys.exit()
 
 if not os.path.isdir("ejercicios"):
     os.mkdir("ejercicios")
 else:
     print("Ya existe la carpeta de ejercicios")
-    sys.exit()
-    # shutil.rmtree("ejercicios")
-    # os.mkdir("ejercicios")
+    print("¿Seguro que quieres borrarla?")
+
+    ans = input("[s/N] ")
+
+    if ans in [ "s", "S" ]:
+        shutil.rmtree("ejercicios")
+        os.mkdir("ejercicios")
+    else:
+        sys.exit()
 
 lines = []
-
-if not os.path.isfile(treeFile):
-    print("No encuentro el archivo tree.files")
-    sys.exit()
 
 with open(treeFile, "r") as f:
     for line in f.readlines():
@@ -62,7 +73,7 @@ curr_dir = []
 
 depth = 0
 
-ej_tex = open("/home/juamnito/Latex-Configuracion-Manual/Scripts/src/ej.tex", "r")
+ej_tex = open(os.path.expanduser("~") + "/Latex-Configuracion-Manual/Scripts/src/ej.tex", "r")
 
 ejercicio_str = ej_tex.readlines()
 ejercicio_str = "".join(ejercicio_str)
@@ -70,9 +81,6 @@ ejercicio_str = "".join(ejercicio_str)
 treeFile = open("tree.tex", "w")
 
 treeFile.write("% árbol de archivos\n\n")
-
-# for elem in elements:
-#     print(elem.flag, elem.string, elem.depth)
 
 for elem in elements:
     if elem.flag == flags[0]:

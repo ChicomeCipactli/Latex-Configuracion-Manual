@@ -4,4 +4,4 @@ if [ -d build ] ; then
     cp build/*.pdf .
 fi
 
-rm -rf $(ls -I lib -I ejercicios -I src -I img -I *.tex -I *.bib -I *.pdf -I makefile)
+rm -rf $(ls -I lib -I ejercicios -I src -I img -I *.tex -I *.bib -I *.pdf -I makefile -I tree.files)

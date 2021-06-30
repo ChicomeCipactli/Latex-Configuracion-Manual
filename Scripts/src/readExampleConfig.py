@@ -1,4 +1,3 @@
-
 class c_variable(object):
     def __init__(self, line = "", nombre = "[ERROR]", valor = "[ERROR]"):
         l = line.split(" ")
@@ -71,9 +70,3 @@ class reader(object):
                 self.ejercicio = v.valor.split("<+>")
             elif v.nombre == "main":
                 self.main = v.valor + ".tex"
-
-if __name__ == '__main__':
-    r = reader('/home/juamnito/Latex-Configuracion-Manual/Ejemplos/analisis-matematico-I', 'tarea1', 'analisis-matematico')
-    for v in r.variables:
-        print([v.nombre], [v.valor])
-    print(r.main, r.ejercicio)

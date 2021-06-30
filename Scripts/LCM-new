@@ -1,3 +1,4 @@
 #! /bin/bash
 
 python $HOME/Latex-Configuracion-Manual/Scripts/src/LCM-new.py
+

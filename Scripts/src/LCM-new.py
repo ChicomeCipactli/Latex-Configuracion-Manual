@@ -50,7 +50,7 @@ shutil.copytree(ejemplo_tex_dir, new_dir)
 
 r = reader(ejemplo_dir, nombre, ejemplo)
 
-new_main_tex = r.main
+new_main_tex = config_LCM.main
 
 os.chdir(new_dir)
 os.rename("main.tex", new_main_tex)
