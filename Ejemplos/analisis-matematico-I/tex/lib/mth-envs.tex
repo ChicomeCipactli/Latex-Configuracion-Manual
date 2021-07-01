@@ -1,8 +1,5 @@
 % --------- Definiciones de teoremas, definiciones, axiomas, problemas...
 
-\definecolor{tscolor}{rgb}{0.6,0,0.3}
-\newcommand{\tscolor}{purple}
-
 \newenvironment{proof}[1][\textbf{\textit{Demostración}}]{
      \par\medskip\noindent
      \textcolor{tscolor}{#1.}
@@ -21,7 +18,12 @@
 
 \newcounter{problem}
 \newenvironment{problem}[1][\theproblem]{
-    \begin{tcolorbox}[colback=\tscolor!20,colframe=\tscolor!50]
+    \begin{tcolorbox}[colback=\tscolback,
+        colframe=\tscolframe,
+        arc=3mm,
+        outer arc=1mm,
+        sharp corners=downhill
+        ]
         \refstepcounter{problem}
         \textbf{Problema~#1.}
         \rmfamily
@@ -32,10 +34,16 @@
 
 \newcounter{lemma}
 \newenvironment{lemma}[1][\thelemma]{
-    \begin{tcolorbox}[colback=white!20,colframe=\tscolor!50]
+    \begin{tcolorbox}[
+        colback=white!20,
+        colframe=\tscolframe,
+        arc=3mm,
+        outer arc=1mm,
+        sharp corners=downhill
+        ]
         \refstepcounter{lemma}
         \noindent
-        \color[rgb]{0.6,0,0.3}
+        \color{tscolor}
         \textbf{Lema~#1.}
         \rmfamily
 }{
@@ -45,10 +53,16 @@
 
 \newcounter{theorem}
 \newenvironment{theorem}[1][\thetheorem]{
-    \begin{tcolorbox}[colback=white!20,colframe=\tscolor!50]
+    \begin{tcolorbox}[
+        colback=white!20,
+        colframe=\tscolframe,
+        arc=3mm,
+        outer arc=1mm,
+        sharp corners=downhill
+        ]
         \refstepcounter{theorem}
-        \par\medskip
         \noindent
+        \color{tscolor}
         \textbf{Teorema~#1.}
         \rmfamily
 }{

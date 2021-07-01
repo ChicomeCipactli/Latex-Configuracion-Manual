@@ -20,7 +20,7 @@ flags = [
 
 tabspaces = 4
 
-r = reader()
+# r = reader()
 
 tex = ["ej", ".tex"]
 
