@@ -53,5 +53,4 @@ cada vez que comiences un nuevo proyecto con el proceso que se describe en dicha
 ## Uso
 
 Supongamos que vas a empezar una nueva tarea en el directorio `/`
-
 ![Gif](gifo.gif)
