@@ -54,4 +54,4 @@ cada vez que comiences un nuevo proyecto con el proceso que se describe en dicha
 
 Supongamos que vas a empezar una nueva tarea en el directorio `/`
 
-![Gif](/home/juamnito/descargas/gifo.gif)
+![Gif](gifo.gif)
