@@ -46,9 +46,12 @@ Cada uno es una plantilla de un proyecto de [LaTeX](https://en.wikipedia.org/wik
 La configuración de dichos proyectos depende de cómo quiero que funcionen mis tareas, pero puedes modificar sus nombres y toda 
 la configuración para que se adapte a tu forma de trabajar, siempre y cuando no elimines el archivo `makefile` y seas cuidadoso con el archivo `tree.files`.
 
-En la sección de [Uso](#Uso) verás cómo generar el árbol de ejercicios. Por defecto cada ejercicio tiene nombre `ej<+>.tex` pero puedes modificarlo
+En la sección [Uso](#Uso) verás cómo generar el árbol de ejercicios. Por defecto cada ejercicio tiene nombre `ej<+>.tex` 
+pero estoy trabajando para que puedas modificarlo
 cada vez que comiences un nuevo proyecto con el proceso que se describe en dicha sección.
 
 ## Uso
 
-Digamos que vas a empezar una nueva tarea
+Supongamos que vas a empezar una nueva tarea en el directorio `/`
+
+![Gif](/home/juamnito/descargas/gifo.gif)
