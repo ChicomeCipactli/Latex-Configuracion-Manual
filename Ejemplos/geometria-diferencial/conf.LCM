@@ -1,0 +1,31 @@
+# Puedes modificar la variable autor: con tu propio nombre en el formato que quieras
+# Existen variables como nombre o ejemplo que corresponden al
+# nombre que le asignaste a tu proyecto en el momento de ejecutar LCM-new 
+# y al nombre del ejemplo copiado respectivamente
+
+# Puedes inicializar más variables con 'nv variable: valor'
+
+# la variable main es la que le dará el nombre a tu main.tex
+
+nv separador -
+nv autor Juan_Parra
+nv main $ejemplo + $nombre + $autor
+
+    # En este caso por ejemplo se cambiaría el nombre de
+    #   main.tex -> topologia-I-tarea1-Juan Parra.tex
+    # si $ejemplo es topologia-I y $nombre es tarea1
+
+# Los símbolos de ' + ' se sustituyen por el valor de $separador en el nombre final
+
+# Es importante el orden en el que se declaran las variables
+
+# Otra variable importante es el nombre de los ejercicios:
+
+nv ejercicio ej<+>.tex
+
+    # En <+> se sustituirá el número o nombre del ejercicio que pusiste en -T
+    # al momento de ejecutar LCM-tree
+
+    # El resultado sería ej1.tex por ejemplo, si <+> toma el valor de 1
+
+    # Otra forma de configurarlo puede ser problema<+> -> problema1.tex

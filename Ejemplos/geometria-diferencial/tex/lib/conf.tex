@@ -1,0 +1,116 @@
+\usepackage[T1]{fontenc}
+\usepackage[
+    left=6.5cm,
+    right=2cm,
+    top=2cm,
+    bottom=3cm
+]{geometry}
+\usepackage{
+    amsmath,
+    amsfonts,
+    bbm
+}
+% Fuentes bonitas
+\usepackage{newpxtext,newpxmath}
+
+\usepackage{enumerate}
+% \usepackage{titling}
+% \usepackage{tipa}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, mexico]{babel}
+% \usepackage{csquotes}
+% \usepackage{amsbsy}
+\usepackage[spanish]{babel}
+\usepackage{datetime}
+% \usepackage{natbib}
+% \usepackage{dsfont} 
+% \usepackage{gensymb}
+% \usepackage{textcomp}
+\usepackage{flushend}
+\usepackage{anyfontsize}
+
+%%floor and ceilling
+\usepackage{mathtools}
+%% includegraphics command.
+\usepackage{graphicx}
+%% various useful mathematical symbols
+\usepackage{amssymb}
+%% extended theorem environments
+% \usepackage{amsthm}
+
+
+% Section size
+\usepackage{sectsty}
+    \sectionfont{\fontsize{13}{11}\selectfont}
+
+\usepackage{float}
+\usepackage{mathrsfs}
+
+%Ref
+\usepackage{hyperref}
+\usepackage[spanish]{cleveref}
+
+\usepackage[nottoc]{tocbibind}
+
+%Figuras numeradas
+\usepackage{chngcntr}
+    \counterwithin{figure}{section}
+
+% formato personalizado
+\newdateformat{mydate}{\THEMONTH \THEDAY, \THEYEAR}
+% definir fecha exacta
+\newdate{hmw}{07}{09}{2019}
+
+
+% ---- Colores -----
+
+    % Colores
+
+\usepackage[dvipsnames]{xcolor}
+    \definecolor{topologia-I}{RGB}{140,90,5}
+    \definecolor{analisis-matematico-I}{RGB}{175,5,45}
+    \definecolor{metodos-numericos}{RGB}{125,125,125}
+    \definecolor{ecuaciones-diferenciales-parciales-I}{RGB}{10,155,25}
+    \definecolor{geometria-diferencial}{RGB}{27,76,165}
+
+    \colorlet{tscolor}{geometria-diferencial}
+
+    % Cajas con colores
+
+\usepackage{tcolorbox}
+        % -- analisis-matematico-I --
+    \newcommand{\tscolbanalisis}{purple!70!orange!30}
+    \newcommand{\tscolfanalisis}{purple!90!orange!90}
+        % -- topologia-I --
+    \newcommand{\tscolbtopologia}{brown!80!orange!20}
+    \newcommand{\tscolftopologia}{brown!100!purple!80!black!95}
+        % -- metodos-numericos-I --
+    \newcommand{\tscolbmetodos}{gray!80!gray!20}
+    \newcommand{\tscolfmetodos}{gray!80!black!90}
+        % -- ecuaciones-diferenciales-parciales-I --
+    \newcommand{\tscolbedp}{green!80!blue!30}
+    \newcommand{\tscolfedp}{green!90!blue!70!black!95}
+        % -- geometria-diferencial --
+    \newcommand{\tscolbgeodif}{blue!80!green!30}
+    \newcommand{\tscolfgeodif}{blue!90!green!70!black!95}
+
+    \newcommand{\tscolback}{\tscolbgeodif}
+    \newcommand{\tscolframe}{\tscolfgeodif}
+
+% ---- Fancyhdr para header -----
+
+\usepackage{fancyhdr}
+
+\newcounter{tarea}
+
+\pagestyle{fancy}
+    \fancyhf{}
+    \rhead{\fecha}
+    \lhead{\autor}
+    \rfoot{\textit{\textbf{Página \thepage}}}
+
+% ----- parindent para tamño de indentación -----
+
+\setlength\parindent{0.5cm}
+
+
