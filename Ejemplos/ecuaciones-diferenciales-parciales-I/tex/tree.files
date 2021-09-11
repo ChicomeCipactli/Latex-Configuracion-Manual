@@ -14,6 +14,4 @@
 #     -F introducción.tex desarrollo.tex conclusión.tex readme.txt main.cpp
 #     -T 1 2 5 
 
-# -T 1 2 3 4
-
--T 1 2 4 8 10
+-T 1 2 3 4 5 6

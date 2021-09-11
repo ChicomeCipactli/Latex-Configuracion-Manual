@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd enunciados
+
+for e in *
+do
+    zathura $e &
+done

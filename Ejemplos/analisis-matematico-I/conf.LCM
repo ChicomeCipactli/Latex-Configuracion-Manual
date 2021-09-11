@@ -7,9 +7,9 @@
 
 # la variable main es la que le dará el nombre a tu main.tex
 
-nv separador -
-nv autor Juan_Parra
-nv main $ejemplo + $nombre + $autor
+nv separador _
+nv autor Juan-Armando-Parra-Flores
+nv main $autor + $nombre
 
     # En este caso por ejemplo se cambiaría el nombre de
     #   main.tex -> topologia-I-tarea1-Juan Parra.tex

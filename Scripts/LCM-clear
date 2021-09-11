@@ -1,3 +1,3 @@
 #! /bin/bash
 
-rm -rf $(ls -I lib -I ejercicios -I src -I img -I *.tex -I *.bib -I makefile -I tree.files)
+rm -rf $(ls -I lib -I enunciados -I ejercicios -I src -I img -I *.tex -I *.bib -I makefile -I tree.files -I cuentas)
