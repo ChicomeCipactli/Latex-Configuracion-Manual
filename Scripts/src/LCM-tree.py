@@ -113,7 +113,7 @@ for elem in elements:
             name = name[2:]
             print("touch", name)
             if e[-4:] == ".tex":
-                treeFile.write("\t\\input{ejercicios/" + name[:-4] + "}\n")
+                treeFile.write("\\input{ejercicios/" + name[:-4] + "}\n")
 
     if elem.flag == flags[2]:
         titles = elem.string.split(" ")

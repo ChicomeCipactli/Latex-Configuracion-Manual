@@ -54,3 +54,4 @@ new_main_tex = r.main
 
 os.chdir(new_dir)
 os.rename("main.tex", new_main_tex)
+

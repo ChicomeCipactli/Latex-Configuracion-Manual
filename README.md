@@ -1,4 +1,4 @@
-# Latex-Configuracion-Manual
+# T-scripts
 
 Este proyecto es una configuración que puede ser de utilidad al momento de empezar un nuevo proyecto cuando quieras hacer 
 tus tareas de matemáticas en [LaTeX](https://en.wikipedia.org/wiki/LaTeX).
