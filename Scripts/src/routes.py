@@ -2,8 +2,8 @@ import os
 
 home_dir = os.path.expanduser("~")  # Equivalente a $HOME
 
-LCM_dir = home_dir + '/Latex-Configuracion-Manual'
-ejemplos_dir = LCM_dir + '/Ejemplos'
-scripts_dir = LCM_dir + '/Scripts'
+T_dir = home_dir + '/T-scripts'
+ejemplos_dir = T_dir + '/Ejemplos'
+scripts_dir = T_dir + '/Scripts'
 
 curr_dir = os.getcwd() 

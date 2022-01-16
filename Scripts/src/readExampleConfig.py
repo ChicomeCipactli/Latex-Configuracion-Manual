@@ -38,7 +38,7 @@ class reader(object):
         return variables
 
     def __init__(self, ejemplo_dir, nombre, ejemplo):
-        self.variables = self.readVariables(self.readLines(ejemplo_dir + "/conf.LCM"))
+        self.variables = self.readVariables(self.readLines(ejemplo_dir + "/conf.tscripts"))
 
         self.ejercicio = ["ej",".tex"]
         self.main = "main.tex"

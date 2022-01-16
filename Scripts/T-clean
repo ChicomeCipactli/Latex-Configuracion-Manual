@@ -1,0 +1,7 @@
+#! /bin/bash
+
+if [ -d build ] ; then
+    cp build/*.pdf .
+fi
+
+T-clear

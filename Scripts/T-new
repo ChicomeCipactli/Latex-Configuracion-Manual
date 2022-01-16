@@ -1,0 +1,4 @@
+#! /bin/bash
+
+python $HOME/T-scripts/Scripts/src/T-new.py
+
