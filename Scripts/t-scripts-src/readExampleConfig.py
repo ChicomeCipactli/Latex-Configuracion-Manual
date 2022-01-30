@@ -1,3 +1,4 @@
+
 class c_variable(object):
     def __init__(self, line = "", nombre = "[ERROR]", valor = "[ERROR]"):
         l = line.split(" ")

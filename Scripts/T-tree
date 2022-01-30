@@ -3,4 +3,4 @@
 vim tree.files
 wait
 
-python $HOME/T-scripts/Scripts/src/T-tree.py
+python $HOME/.local/bin/t-scripts-src/T-tree.py

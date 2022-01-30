@@ -73,7 +73,7 @@ curr_dir = []
 
 depth = 0
 
-ej_tex = open(os.path.expanduser("~") + "/T-scripts/Scripts/src/ej.tex", "r")
+ej_tex = open(os.path.expanduser("~") + "/T-scripts/Scripts/t-scripts-src/ej.tex", "r")
 
 ejercicio_str = ej_tex.readlines()
 ejercicio_str = "".join(ejercicio_str)

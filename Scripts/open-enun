@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd enunciados
+cd enun
 
 zathura *.pdf &
 # zathura *.djvu &

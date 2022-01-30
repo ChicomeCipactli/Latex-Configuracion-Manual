@@ -1,7 +1,12 @@
 #! /bin/bash
 
-proj_d=T-scripts
-path_to_scripts=~/$proj_d/Scripts
+# Make shure that the directory ./local/bin is executable
 
-echo "export PATH=$PATH:$path_to_scripts:$PATH" >> ~/.bashrc
-echo "export PATH=$PATH:$path_to_scripts:$PATH" >> ~/.zshrc
+localbin=$HOME/.local/bin
+scripts=$HOME/T-scripts/Scripts
+
+echo "export PATH=$PATH:$localbin" >> ~/.bashrc
+echo "export PATH=$PATH:$localbin" >> ~/.zshrc
+
+# installing scripts
+cp -r $scripts/* $localbin

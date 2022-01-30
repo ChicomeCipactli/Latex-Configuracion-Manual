@@ -1,22 +1,13 @@
-# T-scripts
+# t-scripts
 
-Este proyecto es una configuración que puede ser de utilidad al momento de empezar un nuevo proyecto cuando quieras hacer 
-tus tareas de matemáticas en [LaTeX](https://en.wikipedia.org/wiki/LaTeX).
-El objetivo de esto es evitar copiar archivos y creando tu entorno de trabajo 
-a mano, ya que sin darte cuenta desperdicias un porcentaje considerable de tu vida 
-haciendo clicks que puedes evitar.
-Sobre todo también es útil por si quieres mantener la configuración de la tarea anterior o si quieres modificar la configuración 
-para tareas futuras.
+T-scripts automatiza tus tareas escritas en [LaTeX](https://en.wikipedia.org/wiki/LaTeX) además de ayudarte a mantener la configuración de tus tareas consistente.
 
 ## Dependencias
 
-Esta configuración está siendo desarrollada desde un sistema basado en [Arch Linux](https://wiki.archlinux.org/title/Arch_Linux),
-sin embargo se espera que su funcionamiento sea igual para cualquier distribución de Linux mientras sea capaz de ejecutar:
+Para el correcto funcionamiento de estos scripts debes tener instalados 
 
-- [Make](https://es.wikipedia.org/wiki/Make)
-- [Python](https://es.wikipedia.org/wiki/Python)
-
-Si no eres capaz de ejecutarlos seguramente no los tienes instalados. El proceso de instalación depende de cada distribución.
+- [Make](https://www.gnu.org/software/make/)
+- [Python](https://www.python.org/)
 
 ## Instalación
 
