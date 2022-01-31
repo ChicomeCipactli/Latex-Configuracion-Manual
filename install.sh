@@ -2,11 +2,12 @@
 
 # Make shure that the directory ./local/bin is executable
 
-localbin=$HOME/.local/bin
-scripts=$HOME/T-scripts/Scripts
+source setup
 
-echo "export PATH=$PATH:$localbin" >> ~/.bashrc
-echo "export PATH=$PATH:$localbin" >> ~/.zshrc
+lib=/usr/share/doc/$NAME
+
+[ -d $lib ] || mkdir $lib
 
 # installing scripts
-cp -r $scripts/* $localbin
+cp -r $scripts $lib
+cp -r $ejemplos $lib
