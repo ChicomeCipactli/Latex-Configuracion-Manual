@@ -2,7 +2,7 @@
 
 import argparse
 
-parser = argparse.ArgumentParser()
+parser = argparse.ArgumentParser("")
 
 # Arguments
 parser.add_argument(

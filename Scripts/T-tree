@@ -1,6 +1,6 @@
 #! /bin/bash
 
-vim tree.files
+$EDITOR tree.files
 wait
 
-python $HOME/.local/bin/t-scripts-src/T-tree.py
+python /usr/local/share/tscripts/src/T-tree.py

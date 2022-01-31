@@ -1,4 +1,4 @@
 #! /bin/bash
 
-python $HOME/.local/bin/t-scripts-src/T-new.py
+python /usr/local/share/tscripts/src/T-new.py
 

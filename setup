@@ -1,9 +1,0 @@
-#!/bin/bash
-
-NAME=tscripts
-
-scripts=$HOME/T-scripts/Scripts
-ejemplos=$HOME/.config/$NAME
-config=$HOME/.config/$NAME
-
-
