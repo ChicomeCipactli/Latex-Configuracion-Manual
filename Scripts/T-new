@@ -1,4 +1,0 @@
-#! /bin/bash
-
-python /usr/local/share/tscripts/src/T-new.py
-

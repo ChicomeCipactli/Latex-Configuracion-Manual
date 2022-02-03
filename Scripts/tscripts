@@ -1,15 +1,81 @@
-#!/bin/python
+#!/usr/bin/python
 
-import argparse
+import os, sys, argparse
 
-parser = argparse.ArgumentParser("")
+# Path to custom scripts
+sys.path.append(os.path.join(os.path.dirname(__file__), "/usr/local/lib/tscripts"))
+sys.path.append(os.path.join(os.path.dirname(__file__), "/usr/local/lib/tscripts/src"))
+
+# source
+import src.tnew as tnew
+import src.ttree as ttree
+
+def_templates = tnew.defoult_templates()
+
+parser = argparse.ArgumentParser(
+    description = """
+    ¿Te da flojera empezar tu tarea en LaTeX? Espero que este programa te ayude.
+    Copiar tus configuraciones será más fácil y más rápido,
+    y antes de que te arrepientas, ya tendrás todo listo para empezarla.
+    """,
+    epilog = "Plantillas disponibles: " + " ".join(def_templates)
+)
 
 # Arguments
 parser.add_argument(
-    '--foo',
-    dest = 'foo',
-    help = "foo of the %(prog)s program"
+    '-n',
+    dest = 'new',
+    metavar = "plantilla",
+    default = False,
+    type = str,
+    help = "Nombre de la plantilla para copiar",
+)
+
+parser.add_argument(
+    '-nm',
+    dest = 'name',
+    metavar = "nombre",
+    default = 'tarea',
+    help = 'Nombre del nuevo proyecto',
+)
+
+parser.add_argument(
+    '-t',
+    dest = 'tree',
+    const = "ejercicios",
+    default = "",
+    nargs = "?",
+    type = str,
+    help = "Inicializa el directorio de ejercicios",
+)
+
+parser.add_argument(
+    '-c',
+    dest = 'cli',
+    help = "Asistencia en la consola de comandos",
+    action = "store_true",
 )
 
 args = parser.parse_args()
+
+def main():
+    if args.tree:
+        ttree.init_exercises_dir(
+                exercises_dir_name = args.tree
+            )
+        return
+    elif args.new:
+        tmps = args.new
+        pnm = args.name
+        if args.cli:
+            tmps, pnm = tnew.cli_ask_user()
+        tnew.new_project_defoult_template(
+                    template = tmps,
+                    project_name = pnm
+                )
+    else:
+        parser.print_help()
+
+if __name__ == '__main__':
+    main()
 

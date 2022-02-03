@@ -1,9 +1,0 @@
-#!/bin/bash
-
-cd enun
-
-zathura *.pdf &
-# zathura *.djvu &
-sxiv -t *.png &
-sxiv -t *.jpeg &
-sxiv -t *.jpg &

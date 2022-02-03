@@ -1,6 +1,0 @@
-#! /bin/bash
-
-$EDITOR tree.files
-wait
-
-python /usr/local/share/tscripts/src/T-tree.py

@@ -20,8 +20,6 @@ flags = [
 
 tabspaces = 4
 
-# r = reader()
-
 tex = ["ej", ".tex"]
 
 if not os.path.isfile(treeFile):
@@ -59,6 +57,8 @@ class Line(object):
 
         self.string = line[:-1].split(self.flag, 1)[1]
         self.depth = int(line[:-1].split(self.flag, 1)[0].count(" ") / tabspaces)
+
+# Revisado hasta aquí
 
 elements = []
 

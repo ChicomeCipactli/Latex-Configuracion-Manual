@@ -2,13 +2,12 @@ NAME=tscripts
 
 PREFIX ?= /usr/local
 BINPREFIX ?= $(PREFIX)/bin
-LIBPREFIX ?= $(PREFIX)/share
+LIBPREFIX ?= $(PREFIX)/lib
 
 install:
 	 mkdir -p $(DESTDIR)$(BINPREFIX)
 	 # cp -pf Scripts/tscripts $(DESTDIR)$(BINPREFIX)
-	 cp -pf Scripts/T-new $(DESTDIR)$(BINPREFIX)
-	 cp -pf Scripts/T-tree $(DESTDIR)$(BINPREFIX)
+	 cp -pf Scripts/tscripts $(DESTDIR)$(BINPREFIX)
 	 # cp -pf Scripts/T-clean $(DESTDIR)$(BINPREFIX)
 	 # cp -pf Scripts/T-clear $(DESTDIR)$(BINPREFIX)
 	 # cp -pf Scripts/open-enun $(DESTDIR)$(BINPREFIX)
