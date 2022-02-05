@@ -27,7 +27,7 @@ def cli_ask_user():
     def_templates = defoult_templates()
     
     # setting the completer guide
-    completer = Completer(ejemplos)
+    completer = Completer(def_templates)
     readline.set_completer(completer.complete)
     readline.parse_and_bind('tab: complete')
 
@@ -62,10 +62,16 @@ def new_project_defoult_template(template, project_name):
     new_project_dir = os.path.join(
         routes.curr_dir, project_name
     )
+
         # copying the tex common files into the new project directory
-    shutil.copytree(
-        common_tex_path, new_project_dir
-    )
+    try:
+        shutil.copytree(
+            common_tex_path, new_project_dir
+        )
+    except:
+        print("Directory already exists")
+        return
+
         # avoid copying the configuration file for the script
     for file in os.listdir(template_path):
         if file.split(".")[-1] != "tscripts":
@@ -81,13 +87,10 @@ def new_project_defoult_template(template, project_name):
             )
         # reading configuration file for project
     r = reader(
-        template_path, 
-        project_name, 
-        new_project_dir
+        template_path,
+        project_name,
+        template
     )
-    print(new_project_dir)
         # changing the apropiate main.tex name 
     os.chdir(new_project_dir)
-    print(os.getcwd())
-    print(r.main)
     os.rename("main.tex", r.main)

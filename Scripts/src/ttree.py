@@ -12,9 +12,9 @@ import routes
 
 # defoults
 flags = {
-        "dir": "-D",
-        "file": "-F",
-        "tex_file": "-T"
+        "dir": "-D ",
+        "file": "-F ",
+        "tex_file": "-T "
 }
 
 tabspaces = 4
@@ -125,10 +125,7 @@ def init_exercises_dir(
     depth = 0
     
         # Archivo que incluye todo el árbol de archivos
-    tree_tex = open(
-            "tree.tex",
-            "w"
-        )
+    tree_tex = open("tree.tex", "w")
     tree_tex.write("% árbol de archivos\n\n")
 
         # init the directory
@@ -138,10 +135,10 @@ def init_exercises_dir(
         if line.flag == flags["dir"]:
                 # checking if the depth is correct
             if depth == line.depth:
-                curr_dir.append(line.parameter_files)
+                prj_tree.append(line.parameter_files)
                 depth += 1
             elif depth < line.depth:
-                print("Invalid syntax in", tree_files, file)
+                print("Invalid syntax in", tree_files, 'file')
                 print("error in:", line.flag + line.parameter_files)
                 sys.exit()
             else:
@@ -156,16 +153,16 @@ def init_exercises_dir(
             )
         if not os.path.isdir(directory):
             os.mkdir(directory)
-            print(depth * "\t" + "mkdir", prj_tree[-1])
+            print((depth-1) * "\t" + "mkdir", prj_tree[-1])
             tree_tex.write(
-                depth * "\n"
+                (depth-1) * "\t"
                 + "\\section*{" 
                 + prj_tree[-1] 
                 + "}\n"
             )
             # new generic file
         if line.flag == flags["file"]:
-            for file_name in line.parameter_files:
+            for file_name in line.parameter_files.split(" "):
                 open(
                     os.path.join(
                         directory,
@@ -174,7 +171,7 @@ def init_exercises_dir(
                     'a'
                 ).close()
                 print(depth * "\t" + "touch", file_name)
-                if e[-4:] == ".tex":
+                if file_name[-4:] == ".tex":
                     tree_tex.write(
                         depth * "\n"
                         + "\\input{ejercicios/"
@@ -183,20 +180,21 @@ def init_exercises_dir(
                     )
             # new LaTeX file
         if line.flag == flags["tex_file"]:
-            for element in line.parameter_files:
+            for element in line.parameter_files.split(" "):
                 shutil.copyfile(
                         routes.ej_tex,
                         os.path.join(
                             directory,
-                            tex[0] + element + tex[1]
+                            tex[0] + element + "." + tex[1]
                         )
                     )
                 print(
                     depth * "\t" + "init", 
-                    tex[0] + element + tex[1]
+                    tex[0] + element + "." + tex[1]
                 )
                 tree_tex.write(
-                    depth * "\n" 
-                    + "\\input{ejercicios/}"
+                    depth * "\t" 
+                    + "\\input{ejercicios/"
+                    + tex[0] + element + "}\n"
                 )
     tree_tex.close()

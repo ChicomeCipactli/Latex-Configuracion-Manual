@@ -27,6 +27,7 @@ parser.add_argument(
     dest = 'new',
     metavar = "plantilla",
     default = False,
+    nargs = '?',
     type = str,
     help = "Nombre de la plantilla para copiar",
 )
@@ -78,4 +79,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
