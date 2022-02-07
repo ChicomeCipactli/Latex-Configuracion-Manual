@@ -25,8 +25,11 @@ This is an example of my own workflow, so this may not be the way you love worki
 	<img src="img/run_fstx.png" alt="firsttime" width="800"/>
 </p>
 
-2. Let's say you want to copy the LaTeX template you made for the subject 'complex variable'. In this  case that's the template named 'compleja'. 
-As you can see, Im going to start my 'tarea3' (spanish). So I am gonna type the next command, so the template is coppied here with the name 'tarea3'
+2. Let's say you want to copy the LaTeX template you made for the subject 'Complex Analysis'. In this  case that's the template named `compleja`. 
+As you can see, Im going to start my `tarea3` (spanish). So I am gonna type the next command, so the template is coppied here with the name `tarea3`
+```
+fstx -n compleja -nm tarea3
+```
 <p align="center">
 	<img src="img/first_project_1.png" alt="part1" width="800"/>
 </p>
