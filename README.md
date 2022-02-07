@@ -1,6 +1,6 @@
 # fstx
 
-I wrote some python scripts to automate some usefull actions for your [LaTeX](https://www.latex-project.org/) homework. You may want to keep your own configurations so I am looking forward to make it happen in the future. For now, I brought some default configs in case you want to use Instalation.
+I wrote some python scripts to automate some usefull actions for your [LaTeX](https://www.latex-project.org/) homework. You may want to keep your own configurations so I am looking forward to make it happen in the future. For now, I brought some default configs in case you want to try first.
 
 ## Only for linux :(
  
