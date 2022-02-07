@@ -1,15 +1,12 @@
 #!/usr/bin/python
 
-import os 
-import sys
-import shutil
-import readline
+import os, sys, shutil, readline
 
 # source code
 
 import routes
 from completer import Completer
-from readExampleConfig import reader
+from configreader import reader
 
 def defoult_templates():
     templates_names = os.listdir(

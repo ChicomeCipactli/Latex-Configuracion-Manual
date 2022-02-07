@@ -3,8 +3,8 @@
 import os, sys, argparse
 
 # Path to custom scripts
-sys.path.append(os.path.join(os.path.dirname(__file__), "/usr/local/lib/tscripts"))
-sys.path.append(os.path.join(os.path.dirname(__file__), "/usr/local/lib/tscripts/src"))
+sys.path.append(os.path.join(os.path.dirname(__file__), "/usr/local/lib/fstx"))
+sys.path.append(os.path.join(os.path.dirname(__file__), "/usr/local/lib/fstx/src"))
 
 # source
 import src.tnew as tnew

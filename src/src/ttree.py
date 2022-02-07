@@ -1,13 +1,10 @@
 #! /usr/bin/python
 
-import os 
-import sys
-from shutil import copyfile
-import shutil
+import os, sys, shutil
 
 # source code
 
-from readExampleConfig import reader
+from configreader import reader
 import routes
 
 # defoults
