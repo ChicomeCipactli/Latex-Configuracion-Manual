@@ -16,21 +16,38 @@ In case you want to uninstall the scripts, it has the option
 ```
 sudo make uninstall
 ```
+
 ## Usage
-Open a terminal in the place you want tobegin your homework. Type `fstx` to see what options or flags you can use depending on what you want. It will show something like this
-![img1](img/run_fstx.png)
-Let's say you want to copy the LaTeX template you made for the subject 'complex variable'. In this  case that's the template named 'compleja'. 
+This is an example of my own workflow, so this may not be the way you love working. There will be more features that I hope will work for you: copy your own templates.
+
+1. Open a terminal in the place you want tobegin your homework. Type `fstx` to see what options or flags you can use depending on what you want. It will show something like this)
+<p align="center">
+	<img src="img/run_fstx.png" alt="firsttime" width="800"/>
+</p>
+
+2. Let's say you want to copy the LaTeX template you made for the subject 'complex variable'. In this  case that's the template named 'compleja'. 
 As you can see, Im going to start my 'tarea3' (spanish). So I am gonna type the next command, so the template is coppied here with the name 'tarea3'
-![img1](img/first_project_1.png)
-Get into that folder and check what it has 
-![img](img/first_project_2.png)
+<p align="center">
+	<img src="img/first_project_1.png" alt="part1" width="800"/>
+</p>
+
+3. Get into that folder and check what it has 
+<p align="center">
+	<img src="img/first_project_2.png" alt="part1" width="800"/>
+</p>
 There is a `tree.files` file. Open it with your favorite text editor and edit the last line like this. 
-![img](img/tree_editing.png)
+<p align="center">
+	<img src="img/tree_editing.png" alt="part1" width="800"/>
+</p>
+
 That means that I want to write my solutions for three math problems.
 Save and close your text editor and then type the next command
 ```
 fstx -t
 ```
 which will create three files (each one for the corresponding exercise), and place them in the `./ejercicios` folder.
-Open the `.tex`file and replace `<++>` element with the number of the homework. After compiling, this is what you get
-![img](img/compile.png)
+
+4. Open the `.tex`file and replace `<++>` element with the number of the homework. After compiling, this is what you get
+<p align="center">
+	<img src="img/compile.png" alt="part1" width="800"/>
+</p>
