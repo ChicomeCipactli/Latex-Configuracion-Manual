@@ -32,6 +32,25 @@
     \medskip
 }
 
+\newcounter{definition}
+\newenvironment{definition}[1][\thedefinition]{
+    \begin{tcolorbox}[
+        colback=white!20,
+        colframe=\tscolframe,
+        arc=3mm,
+        outer arc=1mm,
+        sharp corners=downhill
+        ]
+        \refstepcounter{definition}
+        \noindent
+        \color{tscolor}
+        \textbf{Definición~#1.}
+        \rmfamily
+}{
+    \end{tcolorbox}
+    \medskip
+}
+
 \newcounter{lemma}
 \newenvironment{lemma}[1][\thelemma]{
     \begin{tcolorbox}[
