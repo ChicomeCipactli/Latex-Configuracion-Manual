@@ -8,7 +8,7 @@
 # la variable main es la que le dará el nombre a tu main.tex
 
 nv separador -
-nv autor juan_parra
+nv autor Juan_Parra
 nv main $ejemplo + $nombre + $autor
 
     # En este caso por ejemplo se cambiaría el nombre de

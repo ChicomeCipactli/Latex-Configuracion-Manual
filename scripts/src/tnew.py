@@ -4,13 +4,13 @@ import os, sys, shutil, readline
 
 # source code
 
-import routes
+import custom_dirs
 from completer import Completer
 from configreader import reader
 
 def defoult_templates():
     templates_names = os.listdir(
-        routes.ejemplos_dir
+        custom_dirs.ejemplos_dir
     )
 
     # only showing the templates not the hidden files
@@ -48,16 +48,16 @@ def cli_ask_user():
 
     # supposing you already have the template and the new project's name
 def new_project_defoult_template(template, project_name):
-        # defining the routes
-    template_path = os.path.join(routes.ejemplos_dir, template)
+        # defining the custom_dirs
+    template_path = os.path.join(custom_dirs.ejemplos_dir, template)
     common_files_path = os.path.join(
-        routes.ejemplos_dir, ".comun"
+        custom_dirs.ejemplos_dir, ".comun"
     )
     common_tex_path = os.path.join(
         common_files_path, "tex"
     )
     new_project_dir = os.path.join(
-        routes.curr_dir, project_name
+        custom_dirs.curr_dir, project_name
     )
 
         # copying the tex common files into the new project directory

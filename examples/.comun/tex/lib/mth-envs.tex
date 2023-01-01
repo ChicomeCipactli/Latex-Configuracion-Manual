@@ -16,27 +16,11 @@
     $\hfill\textcolor{tscolor}{\square}$\\
 }
 
-\newcounter{problem}
-\newenvironment{problem}[1][\theproblem]{
-    \begin{tcolorbox}[colback=\tscolback,
-        colframe=\tscolframe,
-        arc=3mm,
-        outer arc=1mm,
-        sharp corners=downhill
-        ]
-        \refstepcounter{problem}
-        \textbf{Problema~#1.}
-        \rmfamily
-}{
-    \end{tcolorbox}
-    \medskip
-}
-
 \newcounter{definition}
 \newenvironment{definition}[1][\thedefinition]{
     \begin{tcolorbox}[
         colback=white!20,
-        colframe=\tscolframe,
+        colframe=white,
         arc=3mm,
         outer arc=1mm,
         sharp corners=downhill
@@ -55,7 +39,7 @@
 \newenvironment{lemma}[1][\thelemma]{
     \begin{tcolorbox}[
         colback=white!20,
-        colframe=\tscolframe,
+        colframe=white,
         arc=3mm,
         outer arc=1mm,
         sharp corners=downhill
@@ -74,7 +58,7 @@
 \newenvironment{theorem}[1][\thetheorem]{
     \begin{tcolorbox}[
         colback=white!20,
-        colframe=\tscolframe,
+        colframe=\tscolframe!0,
         arc=3mm,
         outer arc=1mm,
         sharp corners=downhill

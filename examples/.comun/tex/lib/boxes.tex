@@ -1,0 +1,36 @@
+% Cajas
+\usepackage[most]{tcolorbox}
+\usepackage{cleveref}
+\tcbuselibrary{skins}
+
+
+\usetikzlibrary{shadings}
+\tcbset{
+	base/.style={
+		empty,
+		frame engine=path,
+		colframe=\tscolback,
+		sharp corners,
+		attach boxed title to top left={yshift*=-\tcboxedtitleheight},
+		boxed title style={size=minimal, top=5pt, left=4pt},
+		coltitle=\tscolframe,fonttitle=\bfseries,
+	}
+}
+
+% \newcounter{problem}
+\newtcolorbox[auto counter,crefname={Problema}{Problemas}]{problem}[1][]{%
+	base,
+	title={Problema \thetcbcounter.},
+	% boxed title style={
+	% 	overlay={
+	% 	\draw[\tscolframe,line width=3pt] (frame.north west)--(frame.north east);
+	% 	}
+	% },
+	drop fuzzy shadow,
+	colback=\tscolframe,
+	% overlay unbroken={
+	% 	\draw[\tscolframe] ([yshift=-1.5pt]title.north east)--([xshift=-0.5pt, yshift=-1.5pt]title.north-|frame.east);
+	% },
+	borderline west={3pt}{-3pt}{\tscolframe},
+	#1
+}

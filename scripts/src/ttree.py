@@ -5,7 +5,7 @@ import os, sys, shutil
 # source code
 
 from configreader import reader
-import routes
+import custom_dirs
 
 # defoults
 flags = {
@@ -179,7 +179,7 @@ def init_exercises_dir(
         if line.flag == flags["tex_file"]:
             for element in line.parameter_files.split(" "):
                 shutil.copyfile(
-                        routes.ej_tex,
+                        custom_dirs.ej_tex,
                         os.path.join(
                             directory,
                             tex[0] + element + "." + tex[1]
