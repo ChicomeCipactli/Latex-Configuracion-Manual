@@ -35,7 +35,7 @@ def find_tree_files_config():
     else:
         return False, "" # if its empty
 
-def make_exercises_dir(forced=False, exercises_dir_name="ejercicios"):
+def make_exercises_dir(forced=False, exercises_dir_name=exercises_dir_name):
     if not os.path.isdir(exercises_dir_name):
         os.mkdir(exercises_dir_name)
     elif forced:
@@ -99,7 +99,7 @@ def real_lines(lines_from_config_file):
     return r_lines
 
 def init_exercises_dir(
-            exercises_dir_name = "ejs",
+            exercises_dir_name = exercises_dir_name,
             forced = False
         ):
         # look for the configuration file
@@ -110,7 +110,9 @@ def init_exercises_dir(
 
         # read the lines of the config file
         # and clean them
-    re_lines = real_lines(read_tree_files_config(tree_files))
+    re_lines = real_lines(
+        read_tree_files_config(tree_files)
+    )
     
         # make exercises directory and move into it
     make_exercises_dir(forced, exercises_dir_name)
@@ -191,7 +193,8 @@ def init_exercises_dir(
                 )
                 tree_tex.write(
                     depth * "\t" 
-                    + "\\input{ejercicios/"
+                    + "\\input{ejercicios"
+                    + directory[1:] + "/"
                     + tex[0] + element + "}\n"
                 )
     tree_tex.close()

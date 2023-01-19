@@ -74,6 +74,12 @@ def main():
                     template = tmps,
                     project_name = pnm
                 )
+    elif args.cli:
+        tmps, pnm = tnew.cli_ask_user()
+        tnew.new_project_defoult_template(
+            template = tmps,
+            project_name = pnm
+        )
     else:
         parser.print_help()
 
