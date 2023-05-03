@@ -1,86 +1,79 @@
 \usepackage[T1]{fontenc}
+
+% Geometría de la página
 \usepackage[
     left=2.5cm,
     right=2.5cm,
     top=2.0cm,
     bottom=2.0cm
-    % textwidth=18cm,
-    % textheight=22cm,
 ]{geometry}
-\usepackage{
-    amsmath,
-    amsfonts,
-    bbm
-}
-\usepackage{enumerate}
+
+% Paquetes matemáticos
+\usepackage{amsmath, amssymb}
+
+\usepackage{enumitem}
 
 \usepackage[spanish]{babel}
 
+% TikZ
 \usepackage{tikz}
 \usetikzlibrary{cd}
 \usetikzlibrary{babel}
 
-% \usepackage{titling}
-% \usepackage{tipa}
+% UTF-8
 \usepackage[utf8]{inputenc}
-% \usepackage{csquotes}
-% \usepackage{amsbsy}
-\usepackage{datetime}
-% \usepackage{natbib}
-% \usepackage{dsfont} 
-% \usepackage{gensymb}
-% \usepackage{textcomp}
+
+% Paquetes de fecha y hora
+\usepackage{datetime2}
+
+% Texto justificado
 \usepackage{flushend}
+
+% Tamaño de letra personalizado
 \usepackage{anyfontsize}
 
 %%floor and ceilling
 \usepackage{mathtools}
+
 %% includegraphics command.
 \usepackage{graphicx}
-%% various useful mathematical symbols
-\usepackage{amssymb}
-%% extended theorem environments
+
+% Extended theorem environments
 % \usepackage{amsthm}
 
-
-% Section size
+% Tamaño de sección
 \usepackage{sectsty}
     \sectionfont{\fontsize{13}{11}\selectfont}
 
+% Floats
 \usepackage{float}
+
+% Fuentes matemáticas adicionales
 \usepackage{mathrsfs}
 
-%Ref
-\usepackage{hyperref}
-\usepackage[spanish]{cleveref}
-
+% Tabla de contenidos
 \usepackage[nottoc]{tocbibind}
 
-%Figuras numeradas
+% Numeración de figuras
 \usepackage{chngcntr}
     \counterwithin{figure}{section}
 
-% formato personalizado
-\newdateformat{mydate}{\THEMONTH \THEDAY, \THEYEAR}
-% definir fecha exacta
-\newdate{hmw}{07}{09}{2019}
-
-
-% ---- Fancyhdr para header -----
-
+% Configuración de encabezado y pie de página
 \usepackage{fancyhdr}
-
 \newcounter{tarea}
 \newcounter{lista}
-
 \pagestyle{fancy}
     \fancyhf{}
     \rhead{\fecha}
     \lhead{\autor}
     \rfoot{\textit{\textbf{Pág. \thepage}}}
 
-% ----- parindent para tamño de indentación -----
-
+% Tamaño de indentación
 \setlength\parindent{1.2cm}
 
+% Hipervínculos
+\usepackage{hyperref}
+
+% Referencias inteligentes
+\usepackage{cleveref}
 
