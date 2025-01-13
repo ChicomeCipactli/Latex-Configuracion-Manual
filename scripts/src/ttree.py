@@ -175,7 +175,7 @@ def init_exercises_dir(
                         depth * "\n"
                         + "\\input{ejercicios/"
                         + file_name[:-4]
-                        + "}\n"
+                        + "}\\pagebreak\n"
                     )
             # new LaTeX file
         if line.flag == flags["tex_file"]:
